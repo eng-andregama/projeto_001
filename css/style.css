@@ -154,7 +154,7 @@ header #Logotipo {
 }
 
 #menu {
-  margin: 26px 0;
+  margin: 12px 0;
 }
 
 #menu li{
@@ -180,6 +180,22 @@ header #Logotipo {
 #menu li.search input::-webkit-input-placeholder {
   color: #FFF;
 }
+
+#menu li.search button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 3px;
+  top: 7px;
+
+}
+
+#menu li.search button i {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+
+}
+
 #menu li a {    /* temos que escrever "li a" senão o navagador não mostra. Esta entrada sobrescreve o padrão do navegador (branco)*/
   color: #FFF;
   font-size: 16px;
@@ -188,3 +204,6 @@ header #Logotipo {
 }
 
 /*Aula 23 - Dica e instalação do Font Awesome Icons */
+#menu li.search .input-group {
+  top: 8px;
+}
