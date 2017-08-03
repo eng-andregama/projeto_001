@@ -162,8 +162,29 @@ header #Logotipo {
   font-family: "OpenSans";
 }
 
+/* Aula 22 */
+#menu li.search {
+  width: 182px;
+
+}
+
+#menu li.search input { /* formata a caixa de busca */
+  background-color: #5C2D90;
+  color: #FFF;
+  border: none; /* Retira a Borda */
+  height: 30px; /* Altura da Caixa de busca */
+  line-height: 30px; /*centraliza o texto na caixa de busca */
+}
+
+/*Para mudar a cor do texto SEARCH dentro da caixa de busca, temos que acionar um motor do navegador dentro do li.serarch input.*/
+#menu li.search input::-webkit-input-placeholder {
+  color: #FFF;
+}
 #menu li a {    /* temos que escrever "li a" senão o navagador não mostra. Esta entrada sobrescreve o padrão do navegador (branco)*/
   color: #FFF;
   font-size: 16px;
-  padding: 10px 25px; /*adiciona margem interna de espaçamento entre o texto dos menus *?
+  padding: 10px 25px; /*adiciona margem interna de espaçamento entre o texto dos menus */
+  font-weight: bold;
 }
+
+/*Aula 23 - Dica e instalação do Font Awesome Icons */
