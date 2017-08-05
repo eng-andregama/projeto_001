@@ -326,19 +326,21 @@ footer .row {
   width: 100%;
 }
 footer .row p {
-  line-height: 60px;
+  line-height: 55px;
   margin-bottom: 0px;
 }
 footer .row-cinza-claro {
   height: 200px;
   background-color: #171F26;
   margin-top: 110px;
+  margin-left: 0px;
 
 }
 footer .row-cinza-escuro {
   height: 60px;
   background-color: #11171D;
   border-top: #242D37 1px solid;
+  margin-left: 0px;
 
 }
 footer .pull-left {
@@ -426,6 +428,11 @@ footer .col-get-in-touch p {
 footer .list-socials {
   margin-top: 4px;
 }
+footer .list-socials li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
 footer .list-socials a {
   display: block;
   border: #9B9B9B 1px solid;
