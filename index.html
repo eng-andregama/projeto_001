@@ -204,9 +204,11 @@
       <script src="lib/jquery/jquery.min.js"></script>
       <script src="lib/bootstrap/js/bootstrap.min.js"></script>
       <script>
-        $("#logotipo").on("mouseover",function(){ <!--Prólogo - Chama a função no jquery -->
-            console.log("Passou o mouse no logotipo!");
-        });
+      $(document).ready(function(){
+          $("#Logotipo").on("mouseover",function(){
+              $("#banner h1").css({"color":"red", "font-size":"12em", "transition":"1s"});
+          });
+      });
       </script>
   </body>
 </html>
