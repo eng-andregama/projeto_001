@@ -204,8 +204,8 @@
       <script src="lib/jquery/jquery.min.js"></script>
       <script src="lib/bootstrap/js/bootstrap.min.js"></script>
       <script>
-        $(document).ready(function(){ <!--Prólogo - Chama a função no jquery -->
-          alert("Jquery, ok!");
+        $("#logotipo").on("mouseover",function(){ <!--Prólogo - Chama a função no jquery -->
+            console.log("Passou o mouse no logotipo!");
         });
       </script>
   </body>
