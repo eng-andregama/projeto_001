@@ -131,6 +131,13 @@ header .header-black li a {
 header #Logotipo {
   position: absolute;
   top: 20px;
+  z-index: 3;
+
+}
+#banner h1.efeito {
+  color: red;
+  font-size: 12em;
+  /*transition: 1s;*/
 
 }
 #menu {
@@ -144,6 +151,12 @@ header #Logotipo {
 /* Aula 22 */
 #menu li.search {
   width: 182px;
+  transition-timing-function: cubic-bezier(1,-.91,.91,1);
+  transition-duration: 1s; /*Adicionado direto no li.search para fazer a ida e a volta do efeito (Aula 33) */
+
+}
+#menu li.search.ativo { /*Aumenta o tamanho da caixa de busca quando o usuário digitar algo (Aula 33) */
+  width: 300px;
 
 }
 #menu li.search input { /* formata a caixa de busca */
@@ -155,6 +168,11 @@ header #Logotipo {
   padding-left: 8px;
 
 }
+#menu li.search.ativo input { /*O input do menu no elemento li.search com a classe ativo faz com que a div também se abra no valor fixo de 300px (Aula 33) */
+  width: 200px; /*O professor fez com 300px. Alterei pra 200px par não quebrar o layout na hora do efeito. */
+
+}
+
 /*Para mudar a cor do texto SEARCH dentro da caixa de busca, temos que acionar um motor do navegador dentro do li.serarch input.*/
 #menu li.search input::-webkit-input-placeholder {
   color: #FFF;
@@ -195,6 +213,7 @@ header #Logotipo {
 
 }
 #banner h1 {
+  transition: 1s; /*Saiu do id banner h1 e foi add direto no banner. Assim ele faz a ida e a volta do efeito */
   color: #FFF;
   top: 300px;
   position: relative; /* Ativa o elemento do texto para a posição indicada */
