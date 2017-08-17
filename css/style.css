@@ -448,6 +448,12 @@ footer .col-get-in-touch i {
   margin: 0 6px;
 
 }
+/* mudei aqui na aula 34 */
+footer .col-get-in-touch a {
+  color: #666;
+
+}
+/* mudei aqui na aula 34 */
 footer .col-get-in-touch p {
   line-height: 20px;
 
