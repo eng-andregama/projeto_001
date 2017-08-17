@@ -4,8 +4,11 @@
       <meta charset="utf-8">
       <title>Orlando City</title>
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!--deve ser adicionado depois do bootstrap, para sobrescrever os ícones padrão. Exemplo de uso: Dentro do botão search, com a tag ,<i><i>-->
       <link rel="stylesheet" href="css/style.css">
+
   </head>
   <body>
       <header>
@@ -49,7 +52,7 @@
                         <li><a href="#">Schedule</a></li>
                         <li class="search">
                             <div class="input-group">
-                                <input type="search" placeholder="Search">
+                                <input type="search" placeholder="Search" id="input-search"> <!--Adicionado o Id input-search para fazer o efeito na caixa de busca (Aula 33)-->
                                     <span class="input-group-btn">
                                         <button type="button"><i class="fa fa-search"></i></button> <!--classe fa fa-search para icone de pesquisa dentro da tag <i></i> -->
                                     </span>
@@ -71,26 +74,62 @@
                   <h2>Lastest News</h2>
                   <hr> <!-- Cria linha horizontal -->
               </div>
-                  <div class="row thumbnails">
-                      <div class="col-md-3">
-                          <img src="img/noticia-thumb.jpg" alt="Noticia">
-                          <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-                          <time>December 21, 2015</time>
+                  <div class="row thumbnails owl-carousel owl-theme"> <!--Aula 34 Plugins o-->
+                      <div class="item"> <!-- Trocamos a classe col-md-3 pela classe item-->
+                          <div class="item-inner"> <!--Criamos a classe item-inner para fazer o carrossel e acrescentamos mais 4 itens as notícias -->
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
                       </div>
-                      <div class="col-md-3">
-                          <img src="img/noticia-thumb.jpg" alt="Noticia">
-                          <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-                          <time>December 21, 2015</time>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
                       </div>
-                      <div class="col-md-3">
-                          <img src="img/noticia-thumb.jpg" alt="Noticia">
-                          <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-                          <time>December 21, 2015</time>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
                       </div>
-                      <div class="col-md-3">
-                          <img src="img/noticia-thumb.jpg" alt="Noticia">
-                          <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-                          <time>December 21, 2015</time>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="item-inner">
+                              <img src="img/noticia-thumb.jpg" alt="Noticia">
+                              <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                              <time>December 21, 2015</time>
+                          </div>
                       </div>
                   </div>
           </div>
@@ -198,18 +237,45 @@
                 <p class="pull-right">Created by Andre at Udemy</p>
             </div>
         </div>
-
     </footer>
-
-      <script src="lib/jquery/jquery.min.js"></script>
-      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-      <script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/OwlCarousel2/dist/owl.carousel.min.js"></script> <!--Aula 34 - Plugins -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Aula 32 e 33 -->
+    <script>
       $(document).ready(function(){
           $("#Logotipo").on("mouseover",function(){
-              $("#banner h1").css({"color":"red", "font-size":"12em", "transition":"1s"});
+              $("#banner h1").addClass("efeito");
+          }).on("mouseout",function(){
+              $("#banner h1").removeClass("efeito");
           });
+          $("#input-search").on("focus",function(){
+              $("li.search").addClass("ativo");
+            }).on("blur",function(){
+              $("li.search").removeClass("ativo");
+            });
+              $(".thumbnails").owlCarousel({
+                  loop: true,
+                  margin: 10,
+                  //nav: true,
+                  //navText: ["Anterior","Proximo"],
+                  responsive: {
+                    0: {
+                        item: 1
+                    },
+                    480: {
+                        item: 3
+                    },
+                    768: {
+                        item: 4
+                    },
+                    1200: {
+                        item: 6
+                    }
+                  }
+              });
       });
-      </script>
+    </script>
   </body>
 </html>
 
