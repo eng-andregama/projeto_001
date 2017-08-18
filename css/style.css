@@ -327,6 +327,7 @@ header #Logotipo {
 
 }
 #call-to-action .btn {
+  margin-top: 30px; /* Acrescentada na aula 41 para descolar o botão PLAY da base do vídeo */
   min-width: 164px;
   height: 44px;
   line-height: 34px;
@@ -479,5 +480,9 @@ footer .list-socials a {
 footer .list-socials i {
   font-size: 16px;
   margin: 7px 8px;
+
+}
+video {
+  width: 60%;
 
 }

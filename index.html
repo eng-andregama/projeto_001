@@ -52,7 +52,6 @@
                         <li><a href="#">Tickets</a></li>
                         <li><a href="#">News</a></li>
                         <li><a href="#">Schedule</a></li>
-
                         <li class="search">
                             <div class="input-group">
                                 <input type="search" placeholder="Search" id="input-search"> <!--Adicionado o Id input-search para fazer o efeito na caixa de busca (Aula 33)-->
@@ -176,7 +175,6 @@
          </div>
     </section>
     <!-- Aula 29 - Projetando o rodapé do site -->
-
     <footer>
         <div class="row row-cinza-claro">
             <div class="container">
@@ -244,41 +242,8 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/OwlCarousel2/dist/owl.carousel.min.js"></script> <!--Aula 34 - Plugins -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src=js/efeitos.js></script> <!--Chama o arquivo com scripts de efeito -->
     <!-- Aula 32 e 33 -->
-    <script>
-      $(document).ready(function(){
-          $("#Logotipo").on("mouseover",function(){
-              $("#banner h1").addClass("efeito");
-          }).on("mouseout",function(){
-              $("#banner h1").removeClass("efeito");
-          });
-          $("#input-search").on("focus",function(){
-              $("li.search").addClass("ativo");
-            }).on("blur",function(){
-              $("li.search").removeClass("ativo");
-            });
-              $(".thumbnails").owlCarousel({
-                  loop: true,
-                  margin: 10,
-                  //nav: true,  // Estas duas linhas permitem que apareça os botões Proximo e Anterior no do carrossel.
-                  //navText: ["Anterior","Proximo"],
-                  responsive: {
-                    0: {
-                        item: 1
-                    },
-                    480: {
-                        item: 3
-                    },
-                    768: {
-                        item: 4
-                    },
-                    1200: {
-                        item: 6
-                    }
-                  }
-              });
-      });
-    </script>
   </body>
 </html>
 
