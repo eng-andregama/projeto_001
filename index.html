@@ -2,17 +2,21 @@
 <html>
   <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
       <title>Orlando City</title>
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
       <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!--deve ser adicionado depois do bootstrap, para sobrescrever os ícones padrão. Exemplo de uso: Dentro do botão search, com a tag ,<i><i>-->
       <link rel="stylesheet" href="css/style.css">
-
+      <link rel="stylesheet" href="css/style-mobile.css">
   </head>
   <body>
       <header>
-          <div class="container">
+          <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button> <!-- botão menu hot dog -->
+          <button id="btn-search" type="button"><i class="fa fa-search"></i></button> <!-- Lupa de pesquisa formato smartphones -->
+
+          <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
             <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
           </div>
           <div class="header-black">
@@ -76,7 +80,11 @@
                   <h2>Lastest News</h2>
                   <hr> <!-- Cria linha horizontal -->
               </div>
-                  <div class="row thumbnails owl-carousel owl-theme"> <!--Aula 34 Plugins o-->
+
+              <button type="button" name="btn-news-prev"><i class="fa fa-angle-left"></i></button>
+              <button type="button" name="btn-news-next"><i class="fa fa-angle-right"></i></button>
+
+                  <div class="row thumbnails owl-carousel  owl-carousel owl-theme"> <!--Aula 34 Plugins o-->
                       <div class="item"> <!-- Trocamos a classe col-md-3 pela classe item-->
                           <div class="item-inner"> <!--Criamos a classe item-inner para fazer o carrossel e acrescentamos mais 4 itens as notícias -->
                               <img src="img/noticia-thumb.jpg" alt="Noticia">
