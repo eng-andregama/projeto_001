@@ -1,81 +1,83 @@
 /*Tamanho padrão para tablets */
 @media only screen and (max-width: 768px) {
     .header-black ul {
-    display: none;
+        display: none;
     }
 }
 /*Tamanho padrão para smartphones */
 @media only screen and (max-width: 480px) {
-  .header-black ul, #menu {
-  display: none;
-  }
-  #Logotipo {
-    left: 32%;
+    .header-black ul, #menu {
+        display: none;
+    }
+    #Logotipo {
+        left: 32%;
 
-  }
-  #btn-bars, #btn-search {
-    color:#FFF;
-    font-size: 22px;
-    position: absolute;
-    top: 4px; /*Descola os botões do topo do smartphone - Aula 49*/
-    background: none;
-    border: none;
-    display: block; /* Bloqueamos para aparecer no smartphone - Aula 50 *?
+    }
+    #btn-bars, #btn-search {
+        color:#FFF;
+        font-size: 22px;
+        position: absolute;
+        top: 4px; /*Descola os botões do topo do smartphone - Aula 49*/
+        background: none;
+        border: none;
+        display: block; /* Aula 50 - Bloqueamos para aparecer no smartphone */
 
-  }
-  #btn-bars {
-    left: 4px; /*Descola o botão hot dog lado esquerdo - Aula 49*/
+    }
+    #btn-bars {
+        left: 4px; /*Descola o botão hot dog lado esquerdo - Aula 49 */
 
-  }
-  #btn-search {
-    right: 4px; /*Descola o botão de lupa lado direito - Aula 49*/
+    }
+    #btn-search {
+        right: 4px; /*Descola o botão de lupa lado direito - Aula 49*/
 
-  }
-  #banner { /*Altura do banner (Figura) Orlando City no mobile - Aula 50 */
-    height: 317px;
-    background-size: cover;
-    background-position: 0px;
-    text-align: center;
+    }
+}
+    #banner { /*Altura do banner (Figura) Orlando City no mobile - Aula 50 */
+        height: 317px;
+        background-size: cover;
+        background-position: 0px;
+        text-align: center;
 
-  }
-  #banner h1 { /*Altura do texto Orlando City no mobile - Aula 50 */
-    top: 180px;
-    font-size: 48px;
-    margin-left: 0px;
+    }
+    #banner h1 { /*Altura do texto Orlando City no mobile - Aula 50 */
+      top: 180px;
+      font-size: 48px;
+      margin-left: 0px;
 
-  }
-  #banner h1 small{ /*Altura do texto Orlando City no mobile - Aula 50 */
-    font-size: 22px;
+    }
+    #banner h1 small { /*Altura do texto Orlando City no mobile - Aula 50 */
+      font-size: 22px;
 
-  }
-  #news h2 { /*Ajuste do seletor de notícias #news para mobile - AUla 51*/
-    font-size: 32px;
-  }
-  #news hr { /*Ajuste do seletor de notícias #news para mobile - AUla 51*/
-    border-width: 4px;
-  }
-  .owl-carousel .owl-wrapper-outer {
-    margin-left: 15px;
+    }
+    #news h2 { /*Ajuste do seletor de notícias #news para mobile - AUla 51*/
+      font-size: 32px;
+    }
+    #news hr { /*Ajuste do seletor de notícias #news para mobile - AUla 51*/
+      border-width: 4px;
+    }
+    .owl-carousel .owl-wrapper-outer {
+      margin-left: 15px;
 
-  }
-  .thumbnails {
-    text-align: center;
-  }
-  #news .thumbnails .item-inner img {
-    width: 80%;
-  }
-  #btn-news-prev, #btn-news-next {
-    background: none;
-    border: none;
-    color: #5E2699;
-    font-size: 48px;
-    display: block;
-    position: absolute;
-    top: 130px;
-    z-index: 4;
-    outline: 0;
-  }
-  #btn-news-next {
-    right: 10px;
-  }
+    }
+    .thumbnails {
+      text-align: center;
+
+    }
+    #news .thumbnails .item-inner img {
+      width: 80%;
+    }
+    #btn-news-prev, #btn-news-next {
+      background: none;
+      border: none;
+      color: #5E2699;
+      font-size: 48px;
+      display: block;
+      position: absolute;
+      top: 130px;
+      z-index: 4;
+      outline: 0;
+    }
+    #btn-news-next {
+      right: 10px;
+    }
 }

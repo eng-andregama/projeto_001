@@ -169,7 +169,7 @@ header #Logotipo {
 
 }
 #menu li.search.ativo input { /*O input do menu no elemento li.search com a classe ativo faz com que a div também se abra no valor fixo de 300px (Aula 33) */
-  width: 200px; /*O professor fez com 300px. Alterei pra 200px par não quebrar o layout na hora do efeito. */
+  width: 300px; /*O professor fez com 300px. Alterei pra 200px par não quebrar o layout na hora do efeito. */
 
 }
 
@@ -327,8 +327,8 @@ header #Logotipo {
 
 }
 #call-to-action .btn {
-  margin-top: 30px; /* Acrescentada na aula 41 para descolar o botão PLAY da base do vídeo */
   min-width: 164px;
+  margin-top: 30px; /* Acrescentada na aula 41 para descolar o botão PLAY da base do vídeo */
   height: 44px;
   line-height: 34px;
   border-radius: 0px;
@@ -350,6 +350,10 @@ header #Logotipo {
     max-width: 400px;
 
 }
+footer {
+  margin-top: 110px;
+}
+
 footer .row {
   width: 100%;
 }
@@ -417,7 +421,7 @@ footer .row-cols time {
 
 }
 footer .col-links a,
-.col-get-in-touch a {
+/*.col-get-in-touch a */{
   color: #FFF;
   font-family: Arial;
   font-size: 14px;
@@ -488,6 +492,6 @@ video {
 }
 #btn-bars, #btn-search,
 #btn-news-prev, #btn-news-next {
-  display: none;
+  display: none; /* Aula 50 - Esconde os botões hot-dog e search no desktop */
 
 }
