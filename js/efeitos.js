@@ -16,7 +16,7 @@ $(document).ready(function(){
           //nav: true,  // Estas duas linhas permitem que apareça os botões Proximo e Anterior no do carrossel.
           //navText: ["Anterior","Proximo"],
           /*responsive: {
-            0: {
+          //  0: {
                 item: 1
             },
             480: {
@@ -29,5 +29,12 @@ $(document).ready(function(){
                 item: 6
             }
           }*/
+      });
+      var owl = $(".thumbnails").data('.owlCarousel');
+      $('#btn-news-prev').on("click", function(){
+        owl.prev();
+      });
+      $('#btn-news-next').on("click", function(){
+        owl.next();
       });
   });
