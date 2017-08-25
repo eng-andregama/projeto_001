@@ -253,6 +253,7 @@ header #Logotipo {
 }
 #news .thumbnails {
   margin-top: 20px;
+/*margin-left: 28px; Acrescentado para retirar o botão de cima do thumbnail na pagina desktop */
 
 }
 #news .thumbnails h3 {

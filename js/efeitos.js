@@ -24,10 +24,10 @@ $(document).ready(function(){
             },
             768: {
                 items: 4
-            },
-            1200: {
+            }
+            /*1200: {
                 items: 6
-            },
+            }, Desativado via suporte HCODE - Aula 51*/
           }
     });
         var owl = $(".thumbnails").data('.owlCarousel');
@@ -36,5 +36,5 @@ $(document).ready(function(){
         });
         $('#btn-news-next').on("click", function(){
           owl.next();
-      });
+        });
   });

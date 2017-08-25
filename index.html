@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width:device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
       <title>Orlando City</title>
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
@@ -14,11 +14,11 @@
   <body>
       <header>
           <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
-            <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
+                <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
           </div>
           <div class="header-black">
                 <div class="container">
-                  <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button> <!-- botão menu hot dog -->
+                  <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>  <!--botão menu hot dog -->
                   <button id="btn-search" type="button"><i class="fa fa-search"></i></button> <!-- Lupa de pesquisa formato smartphones -->
                       <ul class="pull-right"> <!--Posiciona os elementos à direita-->
                           <li class="club-01"><a href="#"></a></li>
@@ -80,9 +80,11 @@
                   <h2>Lastest News</h2>
                   <hr> <!-- Cria linha horizontal -->
               </div>
+              <button type="button" id="btn-news-prev"><i class="fa fa-angle-left"></i></button>
+              <button type="button" id="btn-news-next"><i class="fa fa-angle-right"></i></button>
 
-              <button type="button" name="btn-news-prev"><i class="fa fa-angle-left"></i></button>
-              <button type="button" name="btn-news-next"><i class="fa fa-angle-right"></i></button>
+              <!--<button type="button" name="btn-news-prev"><i class="fa fa-angle-left"></i></button>
+              <button type="button" name="btn-news-next"><i class="fa fa-angle-right"></i></button> Retiradas via suporte HCODE - Aula 51-->
 
                   <div class="row thumbnails owl-carousel owl-carousel owl-theme"> <!--Aula 34 Plugins o-->
                       <div class="item"> <!-- Trocamos a classe col-md-3 pela classe item-->
@@ -187,12 +189,12 @@
         <div class="row row-cinza-claro">
             <div class="container">
                 <div class="row"> <!--Aula 30 - Projetando o footer -->
-                    <div class="col-md-2 text-center"> <!-- text-center permite centralizar automaticamente no bootstrap -->
+                    <div class="col-md-2 text-center hidden-xs"> <!-- text-center permite centralizar automaticamente no bootstrap. Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
                         <img src="img/orlando-logo.png" class="Logotipo" alt="Logotipo"> <!-- Não pode repetir o id. Mudamos para class="logotipo". -->
                     </div>
                     <div class="col-md-10">
                         <div class="row row-cols"> <!-- Aula 31 - Projetando o footer (continuação) -->
-                            <div class="col-md-4 col-popular-posts"><!-- Classe utilizada para estilizar o css -->
+                            <div class="col-md-4 col-popular-posts hidden-xs"><!-- Classe utilizada para estilizar o css. Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
                                 <h4>Popular Posts</h4>
                                 <ul class="list-unstyled"> <!--Retira a bolinha de marcação da lista não ordenada -->
                                     <li>
@@ -205,7 +207,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md-4 col-links">
+                            <div class="col-md-4 col-links hidden-xs"> <!-- Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
                                 <h4>Links</h4>
                                 <ul class="list-unstyled">
                                     <li><a href="#"><i class="fa fa-angle-right"></i>Tickets</a></li>
@@ -214,12 +216,12 @@
                                 </ul>
                             </div>
                             <div class="col-md-4 col-get-in-touch">
-                                <h4>Get in Touch</h4>
-                                <address>
+                                <h4 class="hidden-xs">Get in Touch</h4> <!-- Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
+                                <address class="hidden-xs">
                                   <i class="fa fa-map-marker"></i><span> 618 E. South Street, Suite 510<br/>
                                   > Orlando, FL 32801</span>
                                 </address>
-                                <p><a href="tel:1855ORLCITY"><i class="fa fa-phone"></i> 1.855.ORL.CITY</a></p>
+                                <p class="hidden-xs"><a href="tel:1855ORLCITY"><i class="fa fa-phone"></i> 1.855.ORL.CITY</a></p> <!-- Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
                                 <ul class="list-unstyled list-socials">
                                   <li>
                                       <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -241,7 +243,7 @@
             </div>
         </div>
         <div class="row row-cinza-escuro">
-            <div class="container">
+            <div class="container copyright-mobile"> <!-- Inserida a classe copyright-mobile (aula 53) para ajustar os textos de copyright no projeto mobile -->
                 <p class="pull-left">Copyright &#169 Orlando City 2016. All rights reserved</p>
                 <p class="pull-right">Created by Andre at Udemy</p>
             </div>
