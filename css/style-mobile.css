@@ -8,7 +8,14 @@
 @media only screen and (max-width: 480px) {
     .header-black ul, #menu {
         display: none;
+        margin-left: 0px;
     }
+    header .header-black { /* Configurando cabeçalho mobile (header header-black) */
+      position: fixed;
+      top: 0px;
+      width: 100% /*Adicionado porque perde-se o width default da viewport quando colocamos uma posição fixa */
+    }
+
     #Logotipo {
         left: 32%;
 
@@ -80,6 +87,7 @@
     #btn-news-next {
       right: 10px;
     }
+    /* Elementos inseridos na aula 54. Formatação das estatisticas, footer e copyright-mobile */
     #estatisticas {
       height: inherit;
 
@@ -91,6 +99,7 @@
     }
     #call-to-action {
       margin-top: 69px;
+      /*padding: 8px;*/
 
     }
     #call-to-action hr {
@@ -122,7 +131,7 @@
 
     }
     #call-to-action .col-xs-6 {
-      padding: 0px;
+      padding: 10px; /* Para desgrudar os botões shop e register mobile, troquei o padding de 0px para 10px - Aula 55. */
 
     }
     footer {
@@ -147,6 +156,50 @@
       margin: 0px;
 
     }
+    footer .list-socials {
+      position: absolute;
+      width: 100%;
+      left: 20px; /* Aula 54 - Alterei left: 0px para 20px para centralizar os icones das redes sociais */
+      top: 50px;
+
+    }
+    footer .col-md-10 {
+      padding: 0px;
+    }
+
+    footer .list-socials a {
+      width: 42px; /*Alterei de 45px para 42px */
+      height: 45px;
+      border-radius: 50%;
+    }
+    footer .list-socials i {
+      font-size: 30px;
+      margin: 6px; /*Alterei de 9px para 6px */
+
+    }
+    footer .row-cinza-claro {
+      height: 157px;
+    }
+    footer .btn-footer {
+      width: 100%;
+      background-color: #11171D;
+      height: 44px;
+      line-height: 35px;
+
+    }
+    footer .col-xs-6 {
+      padding: 0px;
+      padding-right: 5px;
+
+    }
+    footer .col-xs-6:last-child {
+      padding-right: 0px;
+      padding-left: 5px;
+
+    }
+    footer .hidden-sm-up {
+      margin-top: -10px;
+    }
     .copyright-mobile p {
       font-size: 10px;
       line-height: 0px;
@@ -156,4 +209,6 @@
       float: inherit!important;
 
     }
+
+
 }

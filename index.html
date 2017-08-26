@@ -13,6 +13,9 @@
   </head>
   <body>
       <header>
+        <!--Aula 56 parte 1 - Inciando a criação do menu hot dog -->
+
+
           <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
                 <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
           </div>
@@ -222,8 +225,8 @@
                                   > Orlando, FL 32801</span>
                                 </address>
                                 <p class="hidden-xs"><a href="tel:1855ORLCITY"><i class="fa fa-phone"></i> 1.855.ORL.CITY</a></p> <!-- Inserida a classe hidden-xs (aula 53) para esconder o escudo do time e outros atributos no projeto mobile -->
-                                <div class="row-fluid hidden-sm-up"> <!-- Aula 54 - Acrescentada para permitir a fluidez (justificar) a divisão utilizada com a classe col-xs-6, que divide a tela em duas colunas no bootstrap -->
-                                    <div class="col-xs-6">
+                                <div class="row-fluid visible-up"> <!-- Aula 54 - Acrescentada para permitir a fluidez (justificar) a divisão utilizada com a classe col-xs-6, que divide a tela em duas colunas no bootstrap -->
+                                    <div class="col-xs-6"> <!--Classe hidden-xs-up retirada na aula 55 (linha 225) segundo prof. por mau funcionamento. Substituída pela classe visible-xs -->
                                         <a href="#" class="btn btn-footer"><i class="fa fa-map-marker"></i>Location</a> <!-- Botões Mobile (Aula 54) e Acrescentada a classe hidden-sm-up para esconder os botões do small (sm) para cima. Os botões aparecem apenas no mobile-->
                                     </div>
                                     <div class="col-xs-6">
@@ -243,8 +246,8 @@
                                   <li>
                                       <a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a>
                                   </li>
-                                  <li>
-                                      <a href="#" target="_blank"><i class="fa fa-chevron-up"></i></a>
+                                  <li class="page-up"> <!--Aula 55 - Classe adicionada para  ativar o botão mobile (voltar ao topo). Visível apenas no mobile, com id="page-up". PROFESSOR RETIROU A CLASSE e colocou a classe page-up no style.css -->
+                                      <a href="#" id="page-up"><i class="fa fa-chevron-up"></i></a>
                                   </li>
                                 </ul>
                             </div>

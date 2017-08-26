@@ -357,13 +357,14 @@ footer {
 
 footer .row {
   width: 100%;
+  margin-left: 0px;
 }
 footer .row p {
   line-height: 55px;
   margin-bottom: 0px;
 }
 footer .row-cinza-claro {
-  height: 200px;
+  height: 240px; /*Aula 54 - Alterado de 200px para 240px */
   background-color: #171F26;
   margin-top: 110px;
   margin-left: 0px;
@@ -397,7 +398,8 @@ margin-top: 28px;
 footer .col-popular-posts,
 footer .col-links,
 footer .col-get-in-touch {
-  margin-top: 40px;
+margin-top: 40px;
+margin-left: -6px; /*Aula 54 - Coloquei margin-left: -6px para caber os icones da rede social */
 }
 footer .row-cols h4 {
   font-family: "OpenSans";
@@ -465,8 +467,9 @@ footer .col-get-in-touch p {
 
 }
 footer .list-socials {
-  margin-top: 4px;
+  margin-top: 20px; /* Era 4px. Alterei para 20px - Aula 54 */
 }
+
 footer .list-socials li {
   display: inline-block;
   margin-right: 8px;
@@ -487,6 +490,9 @@ footer .list-socials i {
   margin: 7px 8px;
 
 }
+footer .page-up {
+  display: inline-block!important; /*Aula 55 - Alinha o botão do footer (page-up), informando que é esta informação deve sobrescrever as outras (!important) */
+}
 video {
   width: 60%;
 
@@ -494,5 +500,9 @@ video {
 #btn-bars, #btn-search,
 #btn-news-prev, #btn-news-next {
   display: none; /* Aula 50 - Esconde os botões hot-dog e search no desktop */
+
+}
+.page-up {
+  display: none!important;
 
 }

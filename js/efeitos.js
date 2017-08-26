@@ -37,4 +37,11 @@ $(document).ready(function(){
         $('#btn-news-next').on("click", function(){
           owl.next();
         });
+        $("#page-up").on("click",function(event){
+            $("body").animate({
+              scrollTop:0/* Aula 55 - Animate faz o botão subir suavemente. A animação vai durar 1000ms (1s). function(event) cancela o comportamento padrão do click (refresh) */
+            }, 1000);
+            event.preventDefault();
+        }) /*Aula 55 - Inserindo botão page-up mobile */
+
   });
