@@ -15,9 +15,52 @@
       top: 0px;
       width: 100% /*Adicionado porque perde-se o width default da viewport quando colocamos uma posição fixa */
     }
+    header #menu-mobile { /*Aula 56 - Adicionando menu-mobile e seus atributos. Visíveis apenas no xs e se o open-menu estiver aberto*/
+      position: fixed;
+      top: 40px;
+      background-color: #FFF;
+      width: 80%;
+      height: 100%;
+      left: 80px;
+      transition: 1s;
+      /* z-index: 5;  Aula 56 - z-index com 5 para ficar por cima da máscara */
 
+    }
+    header.open-menu #menu-mobile { /*Aula 56 - Aqui, o header.open-menu é SEM ESPAÇO */
+      left: 0px;
+
+    }
+    header.open-menu #menu-mobile-mask { /*Configuração da máscara para o fundo menu-mobile-mask, para que o usuário foque no menu apenas */
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: rgba(0,0,0,.5);
+      z-index: 4;
+    }
+    header.open-menu #Logotipo { /*Aula 56 - Configurações do Logotipo para o menu-mobile */
+      position: fixed;
+      top:50px;
+      height: 76px;
+      left: calc(40% - 33px);
+      z-index: !important; /* Aula 56 -  Retirado o z-index: 5 e do menu-mobile e colocado no Logotipo (z-index:!important) para fazê-lo aparecer por cima do menu hot-dog */
+
+    }
+    header.open-menu #menu-mobile li { /* Aula 57 - Estilizando menu-mobile hot-dog */
+      text-align: center;
+
+    }
+    header.open-menu #menu-mobile li a { /* Aula 57 - Estilizando menu-mobile hot-dog */
+      color: #633392;
+      font-family: 'OpenSans';
+      font-weight: bold;;
+      font-size: 16px;
+      padding: 1px;
+    }
     #Logotipo {
         left: 32%;
+        z-index: 6; /*Aula 56 - Trazendo o log para a frente do menu. z-index 4 e ()!important) já foram utilizados */
 
     }
     #btn-bars, #btn-search {
@@ -38,7 +81,6 @@
         right: 4px; /*Descola o botão de lupa lado direito - Aula 49*/
 
     }
-
     #banner { /*Altura do banner (Figura) Orlando City no mobile - Aula 50 */
         height: 317px;
         background-size: cover;
@@ -81,7 +123,7 @@
       display: block;
       position: absolute;
       top: 130px;
-      z-index: 4;
+      z-index: 1; /* Aula 56 -  z-index trocado de 4 para 1, para não aparecer por cima do menu hot-dog */
       outline: 0;
     }
     #btn-news-next {

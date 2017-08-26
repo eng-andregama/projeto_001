@@ -12,10 +12,19 @@
       <link rel="stylesheet" href="css/style-mobile.css">
   </head>
   <body>
-      <header>
+      <header class="open-menu">
         <!--Aula 56 parte 1 - Inciando a criação do menu hot dog -->
+          <div id="menu-mobile-mask" class="visible-xs">
 
-
+          </div>
+          <div id="menu-mobile" class="visible-xs"> <!-- Vamos utilizar a classe criada no header para informar se o menu está aberto ou fechado. Para isto, vamos acrescentar as mudanças no style-mobile.css -->
+            <ul> <!-- Aula 57 - Criando itens do menu hot-dog -->
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Schedule</a></li>
+            </ul>
+          </div>
           <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
                 <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
           </div>
