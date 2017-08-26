@@ -13,7 +13,9 @@
     header .header-black { /* Configurando cabeçalho mobile (header header-black) */
       position: fixed;
       top: 0px;
-      width: 100% /*Adicionado porque perde-se o width default da viewport quando colocamos uma posição fixa */
+      width: 100%; /*Adicionado porque perde-se o width default da viewport quando colocamos uma posição fixa */
+      z-index: 9; /*Adicionado na aula 58 para ajustar o menu-mobile */
+
     }
     header #menu-mobile { /*Aula 56 - Adicionando menu-mobile e seus atributos. Visíveis apenas no xs e se o open-menu estiver aberto*/
       position: fixed;
@@ -23,7 +25,7 @@
       height: 100%;
       left: 80px;
       transition: 1s;
-      /* z-index: 5;  Aula 56 - z-index com 5 para ficar por cima da máscara */
+      z-index: 5; /* Aula 56 - z-index com 5 para ficar por cima da máscara */
 
     }
     header.open-menu #menu-mobile { /*Aula 56 - Aqui, o header.open-menu é SEM ESPAÇO */
@@ -38,17 +40,27 @@
       left: 0px;
       background-color: rgba(0,0,0,.5);
       z-index: 4;
+
     }
     header.open-menu #Logotipo { /*Aula 56 - Configurações do Logotipo para o menu-mobile */
       position: fixed;
       top:50px;
       height: 76px;
       left: calc(40% - 33px);
-      z-index: !important; /* Aula 56 -  Retirado o z-index: 5 e do menu-mobile e colocado no Logotipo (z-index:!important) para fazê-lo aparecer por cima do menu hot-dog */
+      z-index: 6; /* Aula 56 -  Retirado o z-index: 5 e do menu-mobile e colocado no Logotipo (z-index:6) para fazê-lo aparecer por cima do menu hot-dog */
 
+    }
+    header.open-menu #menu-mobile ul { /* Aula 57 - Estilizando menu-mobile hot-dog */
+      margin: 20px;
+      margin-top: 100px;
     }
     header.open-menu #menu-mobile li { /* Aula 57 - Estilizando menu-mobile hot-dog */
       text-align: center;
+      border-top: #CCC 1px solid;
+
+    }
+    header.open-menu #menu-mobile li:last-child {  /* Aula 57 - Estilizando menu-mobile hot-dog. last-child utilizado para que o border-bottom fosse aplicado ao último elemento filho e não ficasse sobrescrendo as linhas. Isso causa diferença na cor das mesmas. Uma fica mais fina que a outra. */
+      border-bottom: #CCC 1px solid;
 
     }
     header.open-menu #menu-mobile li a { /* Aula 57 - Estilizando menu-mobile hot-dog */
@@ -56,11 +68,58 @@
       font-family: 'OpenSans';
       font-weight: bold;;
       font-size: 16px;
-      padding: 1px;
+      padding: 18px;
+      display: block;
+
     }
+    header.open-menu .bar-close {
+      position: absolute;
+      bottom:40px; /*Mudei o bottom de 66px para 40px, porque estava mal posicionado */
+      background-color: #633492;
+      height: 40px;
+      width: 100%;
+
+    }
+    header.open-menu .bar-close .btn-close {
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 22px;
+
+    }
+    /* Aula 58 - Efeitos no logotipo e menu */
+    header.open-menu #Logotipo {
+      transform: rotate(360deg);
+
+    }
+    header #input-search-mobile {
+      transition: 1s;
+      top:-40px;
+      position: fixed;
+      width: 70%;
+      left: 15%;
+      background-color: #000;
+      border: none;
+      height: 40px;
+      color: #FFF;
+      z-index: 11;
+      outline: 0px; /*Retira a linha da borda de contorno */
+    }
+    /* Aula 58 - Criação da caixa de busca no mobile */
+    header.open-search #input-search-mobile {
+      /* Retirados todos os atributos e passados para a classe princi*/
+      top: 0px;
+
+    }
+    header.open-search #Logotipo {
+      z-index: 9;
+
+    }
+
     #Logotipo {
         left: 32%;
-        z-index: 6; /*Aula 56 - Trazendo o log para a frente do menu. z-index 4 e ()!important) já foram utilizados */
+        z-index: 10; /*Aula 56 - Trazendo o log para a frente do menu. z-index 4 e ()!important) já foram utilizados */
+        transition: 1s; /*Inserido na aula 58 para fazer animação do menu-mobile */
 
     }
     #btn-bars, #btn-search {
@@ -251,6 +310,4 @@
       float: inherit!important;
 
     }
-
-
 }

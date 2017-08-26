@@ -42,6 +42,15 @@ $(document).ready(function(){
               scrollTop:0/* Aula 55 - Animate faz o botão subir suavemente. A animação vai durar 1000ms (1s). function(event) cancela o comportamento padrão do click (refresh) */
             }, 1000);
             event.preventDefault();
-        }) /*Aula 55 - Inserindo botão page-up mobile */
-
+        }); /*Aula 55 - Inserindo botão page-up mobile */
+        $("#bnt-bars").on("click",function(){ /*AUla 58 - Escondendo o menu-mobile */
+            $("header").toggleClass("open-menu");
+        });
+        $("#menu-mobile-mask, btn-close").on("click",function(){
+            $("header").removeClass("open-menu");
+        });
+        $("#btn-search").on(click,function(){
+            $("header").toggleClass("open-search");
+            $("#input-search-mobile").focus();
+        });
   });
