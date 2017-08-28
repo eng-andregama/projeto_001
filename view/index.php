@@ -1,6 +1,6 @@
 <!-- Header retirado - Aula 64 -->
 <!-- Aula 24 - Adicionando o banner-->
-<?php include_once("header.php";) ?> <!-- Chama o cabeçalho -->
+<?php include_once("header.php"); ?> <!-- Chama o cabeçalho -->
     <section>
           <div id="banner">
               <h1>Orlando City<small>Orlando City Soccer Club</small></h1>
@@ -115,7 +115,7 @@
               </div>
          </div>
     </section>
-  <?php include_once("footer.php") ?> <!-- Aula 64 - Chama o footer no footer.php -->
+  <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
 
 
 
