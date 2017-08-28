@@ -68,8 +68,8 @@
               <div class="row">
                   <nav id="menu" class="pull-right">
                       <ul>
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="videos.html">Videos</a></li>
+                          <li><a href="index.php">Home</a></li> <!-- Mudando as tags de index e videos.html para extensão .php -->
+                          <li><a href="videos">Videos</a></li>
                           <li><a href="#">Tickets</a></li>
                           <li><a href="#">News</a></li>
                           <li><a href="#">Schedule</a></li>
