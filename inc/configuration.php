@@ -4,7 +4,7 @@ class sql {
 
     public $conn;
 
-    public function__construct() {
+    public function __construct() {
 
         return $this-> conn = mysqli_connect("127.0.0.1", "root", "", "hcode_shop");
 
@@ -15,7 +15,7 @@ class sql {
 
     }
 
-    public function__destruct(){
+    public function __destruct(){
 
         mysqli_close($this->conn);
 
