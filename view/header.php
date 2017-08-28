@@ -34,8 +34,10 @@
           <div class="header-black">
                 <div class="container">
                   <input type="search" id="input-search-mobile" class="visible-xs" placeholder="Search...">
+
                   <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>  <!--botão menu hot dog -->
                   <button id="btn-search" type="button"><i class="fa fa-search"></i></button> <!-- Lupa de pesquisa formato smartphones -->
+
                       <ul class="pull-right"> <!--Posiciona os elementos à direita-->
                           <li class="club-01"><a href="#"></a></li>
                           <li class="club-02"><a href="#"></a></li>
@@ -65,21 +67,21 @@
           <div class="container">
               <div class="row">
                   <nav id="menu" class="pull-right">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="videos.html">Videos</a></li>
-                        <li><a href="#">Tickets</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Schedule</a></li>
-                        <li class="search">
-                            <div class="input-group">
-                                <input type="search" placeholder="Search" id="input-search"> <!--Adicionado o Id input-search para fazer o efeito na caixa de busca (Aula 33)-->
-                                    <span class="input-group-btn">
-                                        <button type="button"><i class="fa fa-search"></i></button> <!--classe fa fa-search para icone de pesquisa dentro da tag <i></i> -->
-                                    </span>
-                            </div><!-- /input-group -->
-                        </li>
-                    </ul>
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="videos.html">Videos</a></li>
+                          <li><a href="#">Tickets</a></li>
+                          <li><a href="#">News</a></li>
+                          <li><a href="#">Schedule</a></li>
+                          <li class="search">
+                              <div class="input-group">
+                                  <input type="search" placeholder="Search" id="input-search"> <!--Adicionado o Id input-search para fazer o efeito na caixa de busca (Aula 33)-->
+                                      <span class="input-group-btn">
+                                          <button type="button"><i class="fa fa-search"></i></button> <!--classe fa fa-search para icone de pesquisa dentro da tag <i></i> -->
+                                      </span>
+                              </div><!-- /input-group -->
+                          </li>
+                      </ul>
                   </nav>
               </div>
           </div>
