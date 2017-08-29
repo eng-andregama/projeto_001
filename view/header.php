@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
+      <meta name="viewport" content="width:device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
       <title>Orlando City</title>
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
