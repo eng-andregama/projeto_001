@@ -43,10 +43,10 @@ $(document).ready(function(){
             }, 1000);
             event.preventDefault();
         }); /*Aula 55 - Inserindo botão page-up mobile */
-        $("#bnt-bars").on("click",function(){ /*AUla 58 - Escondendo o menu-mobile */
+        $("#btn-bars").on("click",function(){ /*AUla 58 - Escondendo o menu-mobile */
             $("header").toggleClass("open-menu");
         });
-        $("#menu-mobile-mask, btn-close").on("click",function(){
+        $("#menu-mobile-mask, .btn-close").on("click",function(){
             $("header").removeClass("open-menu");
         });
         $("#btn-search").on("click",function(){
