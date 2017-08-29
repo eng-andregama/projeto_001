@@ -12,8 +12,8 @@
       <link rel="stylesheet" href="css/style-mobile.css">
   </head>
   <body>
-      <header class="open-menu open-search">
-        <!--Aula 56 parte 1 - Inciando a criação do menu hot dog -->
+      <header>
+        <!--Aula 56 parte 1 - *** class="open-search" *** Inciando a criação do menu hot dog -->
             <div id="menu-mobile-mask" class="visible-xs">
 
             </div>
@@ -28,8 +28,8 @@
                     <button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
                 </div>
             </div>
-          <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
-                <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
+          <div class="container"> <!--Aula 49 - ***container-logo*** Desenvolvimento smartphones - Centralizando logo -->
+                <img id="Logotipo" src="img/orlando-logo.png" alt="Logotipo">
           </div>
           <div class="header-black">
                 <div class="container">
