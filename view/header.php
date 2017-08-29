@@ -27,7 +27,7 @@
                 <div class="bar-close"> <!--Aula 57 - Botão para fechar a barra de menu -->
                     <button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
                 </div>
-          </div>
+            </div>
           <div class="container container-logo"> <!--Aula 49 - Desenvolvimento smartphones - Centralizando logo -->
                 <img src="img/orlando-logo.png" id="Logotipo" alt="Logotipo">
           </div>
