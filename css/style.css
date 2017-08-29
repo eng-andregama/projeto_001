@@ -290,8 +290,8 @@ header #Logotipo {
   text-transform: uppercase; /*Atributo que controla as buscas nos motores ignorando o case sensitive */
   font-family: "OpenSans";
   font-size: 64px;
-  /*text-align: center; * não aparece no código fonte hcode */
-  margin-top: 36px; /*Margin top no curso tem 36px. Achei melhor colocar 33px */
+  text-align: center;
+  margin-top: 33px; /*Margin top no curso tem 36px. Achei melhor colocar 33px */
 
 }
 #estatisticas p small {
@@ -299,7 +299,7 @@ header #Logotipo {
   text-transform: uppercase; /*Atributo que controla as buscas nos motores ignorando o case sensitive */
   font-family: "OpenSans";
   font-size: 24px;
-  /*text-align: center; * não aparece no código fonte hcode */
+  text-align: center;
   display: block;  /*Exibe o elemento como elemento de um bloco único. Sem quebras */
 
 }
@@ -366,15 +366,15 @@ footer .row p {
 footer .row-cinza-claro {
   height: 240px; /*Aula 54 - Alterado de 200px para 240px */
   background-color: #171F26;
-  /*margin-top: 110px; * não aparece no código fonte hcode
-  margin-left: 0px; */
+  margin-top: 110px;
+  margin-left: 0px;
 
 }
 footer .row-cinza-escuro {
   height: 60px;
   background-color: #11171D;
   border-top: #242D37 1px solid;
-  /* margin-left: 0px; não aparece no código fonte hcode*/
+  margin-left: 0px;
 
 }
 footer .pull-left {
@@ -399,7 +399,7 @@ footer .col-popular-posts,
 footer .col-links,
 footer .col-get-in-touch {
 margin-top: 40px;
-/*margin-left: -6px; Aula 54 - Coloquei margin-left: -6px para caber os icones da rede social */
+margin-left: -6px; /*Aula 54 - Coloquei margin-left: -6px para caber os icones da rede social */
 }
 footer .row-cols h4 {
   font-family: "OpenSans";
@@ -490,7 +490,7 @@ footer .list-socials i {
   margin: 7px 8px;
 
 }
-  .page-up { /*Só tem o .page-up e não footer .page-up */
+footer .page-up {
   display: inline-block!important; /*Aula 55 - Alinha o botão do footer (page-up), informando que é esta informação deve sobrescrever as outras (!important) */
 }
 video {
