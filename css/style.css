@@ -520,6 +520,9 @@ video {
   position: relative; /* Para posicionar os botões */
 
 }
+#destaque-produtos {
+  margin-top: 30px; /*30px auto não funciona mais */
+}
 #destaque-produtos .col-imagem {
   text-align: center;
 
