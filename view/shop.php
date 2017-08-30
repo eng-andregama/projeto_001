@@ -2,8 +2,8 @@
 <?php include_once("header.php"); ?> <!-- Chama o cabeçalho -->
 <section>
     <div class="container">
-        <div id="destaque-produtos" id="destaque-produtos-container">
-            <div id="destaque-produtos">
+        <div id="destaque-produtos-container">
+            <div id="destaque-produtos" class ="owl-carousel">
                 <div class="item">
                     <div class="col-sm-6 col-imagem">
                         <img src="img/produtos/moto-x.png" alt="Nome do Produto">
@@ -63,7 +63,7 @@
 
         });
 
-        var owlDestaque = $("#destaque-produtos").data('.owlCarousel');
+        var owlDestaque = $("#destaque-produtos").data('owlCarousel');
         $('#btn-destaque-prev').on("click", function(){
           owlDestaque.prev();
         });
