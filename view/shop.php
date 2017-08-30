@@ -59,7 +59,7 @@
         $("#destaque-produtos").owlCarousel({
           autoPlay: 5000,
           items: 1,
-          singleItem: true
+          singleItem: true,
 
         });
 
@@ -72,8 +72,6 @@
         });
     });
 </script>
-
-
 
 
 
