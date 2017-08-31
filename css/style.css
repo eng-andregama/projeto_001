@@ -578,7 +578,7 @@ video {
   position: absolute;
   top: 140px;
   margin-top: 100px;
-  left: -70px; /* Left modificade de 0px para -70px */
+  left: -70px; /* Left modificada de 0px para -70px */
   background: none;
   border: none;
   font-size: 64px;
@@ -590,7 +590,7 @@ video {
   position: absolute;
   top: 140px;
   margin-top: 100px;
-  right: : 0;
+  right: : -70px; /* right modiricada de 0px para -70px */
   background: none;
   border: none;
   font-size: 64px;
