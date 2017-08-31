@@ -41,10 +41,6 @@
                         <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
                     </div>
                 </div>
-
-
-
-
             </div>
                         <button type="button" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
                         <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
