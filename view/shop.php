@@ -6,7 +6,7 @@
             <div id="destaque-produtos" class ="owl-carousel">
                 <div class="item">
                     <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/moto-x.png" alt="Nome do Produto">
+                        <img src="img/produtos/moto-x.png" alt="Nome do Produto" style="width:40%">
                     </div>
                     <div class="col-sm-6 col-descricao">
                         <h2>Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1</h2>
@@ -22,10 +22,45 @@
                         <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
                     </div>
                 </div>
-
                 <div class="item">
                     <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/moto-x.png" alt="Nome do Produto">
+                        <img src="img/produtos/iphone2.jpg" alt="Nome do Produto" style="width:40%">
+                    </div>
+                    <div class="col-sm-6 col-descricao">
+                        <h2>Smartphone Apple IPhone Dual Chip Desbloqueado Sistema Operacional IOS</h2>
+                        <div class="box-valor">
+                            <div class="text-noboleto text-arial-cinza">no boleto</div>
+                            <div class="text-por text-arial-cinza">por</div>
+                            <div class="text-reais text-roxo">R$</div>
+                            <div class="text-valor text-roxo">2.259</div>
+                            <div class="text-valor-centavos text-roxo">,10</div>
+                            <div class="text-parcelas text-arial-cinza">ou em até 10x de R$ 274,88</div>
+                            <div class="text-total text-arial-cinza">total a prazo R$ 2.748,80</div>
+                        </div>
+                        <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-sm-6 col-imagem">
+                        <img src="img/produtos/SmartTVSamsung.jpg" alt="Nome do Produto" style="width:40%">
+                    </div>
+                    <div class="col-sm-6 col-descricao">
+                        <h2>SmartTV Samsung UHD 4K</h2>
+                        <div class="box-valor">
+                            <div class="text-noboleto text-arial-cinza">no boleto</div>
+                            <div class="text-por text-arial-cinza">por</div>
+                            <div class="text-reais text-roxo">R$</div>
+                            <div class="text-valor text-roxo">4.259</div>
+                            <div class="text-valor-centavos text-roxo">,10</div>
+                            <div class="text-parcelas text-arial-cinza">ou em até 10x de R$ 574,88</div>
+                            <div class="text-total text-arial-cinza">total a prazo R$ 5.740,88</div>
+                        </div>
+                        <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-sm-6 col-imagem">
+                        <img src="img/produtos/moto-x.png" alt="Nome do Produto" style="width:40%">
                     </div>
                     <div class="col-sm-6 col-descricao">
                         <h2>Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1</h2>
@@ -50,24 +85,43 @@
 <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
 
 <script>
-    $(function(){
+  $(function(){
+    var owlDestaque = $("#destaque-produtos");
+    owlDestaque.owlCarousel({
+    autoplay: true,
+    autoplayTimeout:2000,
+    items: 1,
+    singleItem: true,
+
+    });
+    $('#btn-destaque-prev').on("click", function(){
+    owlDestaque.trigger('prev.owl.carousel');
+
+    });
+    $('#btn-destaque-next').on("click", function(){
+    owlDestaque.trigger('next.owl.carousel');
+
+    });
+  });
+</script>
+<!--    $(function(){
 
         $("#destaque-produtos").owlCarousel({
-          autoPlay: 5000,
-          items: 1,
-          singleItem: true,
+        autoPlay: 5000,
+        items: 1,
+        singleItem: true,
 
-        });
+     });
 
-        var owlDestaque = $("#destaque-produtos").data('owlCarousel');
-        $('#btn-destaque-prev').on("click", function(){
-          owlDestaque.prev();
-        });
-        $('#btn-destaque-next').on("click", function(){
-          owlDestaque.next();
-        });
-    });
-</script>
+      var owlDestaque = $("#destaque-produtos").data('owlCarousel');
+      $('#btn-destaque-prev').on("click", function(){
+      owlDestaque.prev();
+      });
+      $('#btn-destaque-next').on("click", function(){
+      owlDestaque.next();
+     });
+   }); -->
+
 
 
 
