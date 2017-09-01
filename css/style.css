@@ -468,11 +468,13 @@ footer .col-get-in-touch p {
 }
 footer .list-socials {
   margin-top: 20px; /* Era 4px. Alterei para 20px - Aula 54 */
+  
 }
 
 footer .list-socials li {
   display: inline-block;
   margin-right: 8px;
+
 }
 
 footer .list-socials a {
@@ -483,6 +485,7 @@ footer .list-socials a {
   line-height: 28px;
   border-radius: 14px;
   text-align: center;
+
 
 }
 footer .list-socials i {
@@ -522,6 +525,7 @@ video {
 }
 #destaque-produtos {
   margin-top: 30px; /*30px auto não funciona mais */
+
 }
 #destaque-produtos .col-imagem {
   text-align: center;
@@ -577,8 +581,8 @@ video {
 #btn-destaque-prev {
   position: absolute;
   top: 140px;
-  margin-top: 100px;
-  left: -70px; /* Left modificada de 0px para -70px */
+  margin-top: -40px;
+  left: -40px; /* Left modificada de 0px para -70px */
   background: none;
   border: none;
   font-size: 64px;
@@ -589,8 +593,9 @@ video {
 #btn-destaque-next {
   position: absolute;
   top: 140px;
-  margin-top: 100px;
-  right: : -70px; /* right modiricada de 0px para -70px */
+  margin-top: -40px;
+  left: 1150px;
+  /* right: : -40px; /*right modiricada de 0px para -70px */
   background: none;
   border: none;
   font-size: 64px;
