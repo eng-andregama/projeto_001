@@ -468,7 +468,7 @@ footer .col-get-in-touch p {
 }
 footer .list-socials {
   margin-top: 20px; /* Era 4px. Alterei para 20px - Aula 54 */
-  
+
 }
 
 footer .list-socials li {
@@ -601,5 +601,87 @@ video {
   font-size: 64px;
   color: #2A2A2A;
   outline: 0;
+
+}
+/* Aula 66 - Criando os boxes de promoção */
+
+#promocoes .box-promocao {
+  background-color: #6E3EA4;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  color:#FFF;
+  text-align: center;
+
+}
+#promocoes .box-promocao.box-1 { /* .box-1 refere-se ao primeiro box de promoção e assim sucessivamente */
+  font-family: 'OpenSans';
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 7px;
+
+}
+#promocoes .box-promocao.box-1 p { /*Posicionando os elementos (Textos de promoções) nos boxes */
+  position: absolute;
+  top: 48px; /* Mudado de 58 para 48px */
+
+}
+#promocoes .box-promocao .text-ate {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'OpenSans';
+  position: absolute;
+  left: 15px;
+  top: 5px;
+
+}
+#promocoes .box-promocao .text-numero {
+  font-size: 128px;
+  font-weight: normal;
+  font-family: 'OpenSans';
+  position: absolute;
+  left: 5px;
+  top: -12px;
+}
+#promocoes .box-promocao .text-porcento {
+  font-size: 64px;
+  font-weight: lighter;
+  font-family: 'OpenSans';
+  position: absolute;
+  top: 15px;
+  right: 1px;
+}
+#promocoes .box-promocao .text-off {
+  font-size: 42px;
+  font-family: 'OpenSans';
+  position: relative;
+  top: 90px;
+  right: -70px;
+
+}
+/*Aula 67 - Loja - Parte 3 - Produtos mais buscados */
+.box-produto-info a {
+  text-decoration: none;
+  
+}
+
+.box-produto-info h3 {
+  font-size: 12px;
+  font-family: arial;
+  color #666;
+
+}
+.box-produto-info .produto-img {
+  width: 100%;
+
+}
+.box-produto-info .text-qtd-reviews {
+
+}
+.box-produto-info .text-valor {
+  font-size: 26px;
+  font-weight: bold;
+}
+.box-produto-info .text-parcelado {
 
 }
