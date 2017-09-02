@@ -81,6 +81,74 @@
                         <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
         </div>
     </div>
+
+    <div id="promocoes" class="container">
+        <div class="row">
+          <div class="col-md-2">
+              <div class="box-promocao box-1">
+                  <p>Escolha por Desconto</p>
+              </div>
+
+          </div>
+          <div class="col-md-10">
+              <div class="row-fluid">
+                  <div class="col-md-3">
+                      <div class="box-promocao">
+                          <div class="text-ate">até</div>
+                          <div class="text-numero">40</div>
+                          <div class="text-porcento">%</div>
+                          <div class="text-off">off</div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="box-promocao">
+                          <div class="text-ate">até</div>
+                          <div class="text-numero">60</div>
+                          <div class="text-porcento">%</div>
+                          <div class="text-off">off</div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="box-promocao">
+                          <div class="text-ate">até</div>
+                          <div class="text-numero">80</div>
+                          <div class="text-porcento">%</div>
+                          <div class="text-off">off</div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="box-promocao">
+                          <div class="text-ate">até</div>
+                          <div class="text-numero">85</div>
+                          <div class="text-porcento">%</div>
+                          <div class="text-off">off</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="mais-buscados" class="container">
+        <div class="row text-center"> <!-- Mudei para text-center -->
+            <h2>Os mais buscados</h2>
+            <hr> <!-- Cria linha horizontal -->
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box-produto-info">
+                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
+                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
+                          <h3>Cafeteira Dolce Gusto Arno</h3>
+                          <div class="estrelas"></div>
+                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
+                          <div class="text-valor text-roxo">R$ 209,90</div>
+                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
+                      </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
 
