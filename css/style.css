@@ -612,6 +612,7 @@ video {
   position: relative;
   color:#FFF;
   text-align: center;
+  margin-top: 30px;
 
 }
 #promocoes .box-promocao.box-1 { /* .box-1 refere-se ao primeiro box de promoção e assim sucessivamente */
@@ -662,26 +663,36 @@ video {
 /*Aula 67 - Loja - Parte 3 - Produtos mais buscados */
 .box-produto-info a {
   text-decoration: none;
-  
+
 }
 
 .box-produto-info h3 {
   font-size: 12px;
   font-family: arial;
-  color #666;
+  color: #666;
 
 }
 .box-produto-info .produto-img {
   width: 100%;
 
 }
-.box-produto-info .text-qtd-reviews {
 
-}
 .box-produto-info .text-valor {
   font-size: 26px;
   font-weight: bold;
+
 }
-.box-produto-info .text-parcelado {
+.title-default-roxo h2 {
+  color: #5E2799;
+  font-family: 'OpenSans';
+  font-size: 45px; /* Passei de 48 para 45px */
+  text-transform: uppercase;
+  text-align: center;
+
+}
+.title-default-roxo hr {
+  border: #FDE192 solid 5px; /* Troquei de 8px para 5px */
+  width: 200px;
+  margin: 0 auto;
 
 }
