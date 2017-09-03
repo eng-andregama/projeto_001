@@ -2,9 +2,8 @@
 <?php include_once("header.php"); ?> <!-- Chama o cabeçalho -->
 <section>
     <div class="container" id="destaque-produtos-container" ng-controller="destaque-controller"> <!-- Aula 69 - Incluindo angularjs -->
-        <div id="destaque-produtos">
-            <div id="destaque-produtos" class ="owl-carousel">
-                <div class="item" ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
+        <div id="destaque-produtos" class ="owl-carousel">
+                <div class="item"  ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
                     <div class="col-sm-6 col-imagem">
                         <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:40%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
                     </div>
@@ -43,7 +42,7 @@
             </div>
                         <button type="button" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
                         <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
-        </div>
+        <!--<div id="destaque-produtos" class ="owl-carousel"></div> Esta div estava na linha 5 e fechava o conjunto de produtos. Desativada e passada a classe owlCarousel para a atual linha 5, junto com <div id="destaque-produtos" class ="owl-carousel">.--> 
     </div>
 
     <div id="promocoes" class="container">
