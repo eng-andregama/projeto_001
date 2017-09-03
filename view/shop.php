@@ -130,7 +130,7 @@
     </div>
 
     <div id="mais-buscados" class="container">
-        <div class="row text-center"> <!-- Mudei para text-center -->
+        <div class="row text-center title-default-roxo"> <!-- Mudei para text-center -->
             <h2>Os mais buscados</h2>
             <hr> <!-- Cria linha horizontal -->
         </div>
@@ -140,7 +140,43 @@
                       <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
                           <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
                           <h3>Cafeteira Dolce Gusto Arno</h3>
-                          <div class="estrelas"></div>
+                          <div class="estrelas" data-score="3"></div>
+                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
+                          <div class="text-valor text-roxo">R$ 209,90</div>
+                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box-produto-info">
+                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
+                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
+                          <h3>Cafeteira Dolce Gusto Arno</h3>
+                          <div class="estrelas" data-score="5"></div>
+                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
+                          <div class="text-valor text-roxo">R$ 209,90</div>
+                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box-produto-info">
+                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
+                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
+                          <h3>Cafeteira Dolce Gusto Arno</h3>
+                          <div class="estrelas" data-score="2.5"></div>
+                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
+                          <div class="text-valor text-roxo">R$ 209,90</div>
+                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box-produto-info">
+                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
+                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
+                          <h3>Cafeteira Dolce Gusto Arno</h3>
+                          <div class="estrelas" data-score="5"></div>
                           <div class="text-qtd-reviews text-arial-cinza">(300)</div>
                           <div class="text-valor text-roxo">R$ 209,90</div>
                           <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
@@ -154,22 +190,30 @@
 
 <script>
   $(function(){
-    var owlDestaque = $("#destaque-produtos");
-    owlDestaque.owlCarousel({
-    autoplay: true,
-    autoplayTimeout:2000,
-    items: 1,
-    singleItem: true,
+      var owlDestaque = $("#destaque-produtos");
+      owlDestaque.owlCarousel({
+      autoplay: true,
+      autoplayTimeout:2000,
+      items: 1,
+      singleItem: true,
 
-    });
-    $('#btn-destaque-prev').on("click", function(){
-    owlDestaque.trigger('prev.owl.carousel');
+      });
+      $('#btn-destaque-prev').on("click", function(){
+      owlDestaque.trigger('prev.owl.carousel');
 
-    });
-    $('#btn-destaque-next').on("click", function(){
-    owlDestaque.trigger('next.owl.carousel');
+      });
+      $('#btn-destaque-next').on("click", function(){
+      owlDestaque.trigger('next.owl.carousel');
 
-    });
+      });
+      $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
+          $(this).raty({
+              starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
+              starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
+              starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
+              score         : parseFloat($(this).data("score")), /* recebe o raty de cada avaliação dinamicamente */
+          });
+      });
   });
 </script>
 <!--    $(function(){
