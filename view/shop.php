@@ -22,56 +22,20 @@
                         <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
                     <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/iphone2.jpg" alt="Nome do Produto" style="width:40%">
+                        <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:40%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
                     </div>
                     <div class="col-sm-6 col-descricao">
-                        <h2>Smartphone Apple IPhone Dual Chip Desbloqueado Sistema Operacional IOS</h2>
+                        <h2>{{produto.nome_prod_longo}}</h2>
                         <div class="box-valor">
                             <div class="text-noboleto text-arial-cinza">no boleto</div>
                             <div class="text-por text-arial-cinza">por</div>
                             <div class="text-reais text-roxo">R$</div>
-                            <div class="text-valor text-roxo">2.259</div>
-                            <div class="text-valor-centavos text-roxo">,10</div>
-                            <div class="text-parcelas text-arial-cinza">ou em até 10x de R$ 274,88</div>
-                            <div class="text-total text-arial-cinza">total a prazo R$ 2.748,80</div>
-                        </div>
-                        <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/SmartTVSamsung.jpg" alt="Nome do Produto" style="width:40%">
-                    </div>
-                    <div class="col-sm-6 col-descricao">
-                        <h2>SmartTV Samsung UHD 4K</h2>
-                        <div class="box-valor">
-                            <div class="text-noboleto text-arial-cinza">no boleto</div>
-                            <div class="text-por text-arial-cinza">por</div>
-                            <div class="text-reais text-roxo">R$</div>
-                            <div class="text-valor text-roxo">4.259</div>
-                            <div class="text-valor-centavos text-roxo">,10</div>
-                            <div class="text-parcelas text-arial-cinza">ou em até 10x de R$ 574,88</div>
-                            <div class="text-total text-arial-cinza">total a prazo R$ 5.740,88</div>
-                        </div>
-                        <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/moto-x.png" alt="Nome do Produto" style="width:40%">
-                    </div>
-                    <div class="col-sm-6 col-descricao">
-                        <h2>Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1</h2>
-                        <div class="box-valor">
-                            <div class="text-noboleto text-arial-cinza">no boleto</div>
-                            <div class="text-por text-arial-cinza">por</div>
-                            <div class="text-reais text-roxo">R$</div>
-                            <div class="text-valor text-roxo">1.259</div>
-                            <div class="text-valor-centavos text-roxo">,10</div>
-                            <div class="text-parcelas text-arial-cinza">ou em até 8x de R$ 174,88</div>
-                            <div class="text-total text-arial-cinza">total a prazo R$ 1.399,00</div>
+                            <div class="text-valor text-roxo">{{produto.preco}}</div>
+                            <div class="text-valor-centavos text-roxo">,{{produto.centavos}}</div>
+                            <div class="text-parcelas text-arial-cinza">ou em até {{produto.parcelas}}x de R$ {{produto.parcela}}</div>
+                            <div class="text-total text-arial-cinza">total a prazo R$ {{produto.total}}</div>
                         </div>
                         <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
                     </div>
@@ -193,23 +157,23 @@
           $scope.produtos = [];
 
           $scope.produtos.push({
-            nome_prod_longo :"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
-            foto_principal : "moto-x.png",
-            preco : "1.259",
-            centavos : "10",
-            parcelas : 8,
-            parcela : "174,88",
-            total : "1.399,00"
+            nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
+            foto_principal: "moto-x.png",
+            preco: "1.259",
+            centavos: "10",
+            parcelas: 8,
+            parcela: "174,88",
+            total: "1.399,00"
 
           });
           $scope.produtos.push({
-            nome_prod_longo :"IPhone",
-            foto_principal : "moto-x.png",
-            preco : "1.259",
-            centavos : "10",
-            parcelas : 8,
-            parcela : "174,88",
-            total : "1.399,00"
+            nome_prod_longo:"IPhone",
+            foto_principal: "moto-x.png",
+            preco: "1.259",
+            centavos: "10",
+            parcelas: 8,
+            parcela: "174,88",
+            total: "1.399,00"
 
           });
       });
