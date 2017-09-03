@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="shop">
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Aula 47 - Acrescentando viewport -->
@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="lib/raty/lib/jquery.raty.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/style-mobile.css">
+      <script src="lib/angularjs/angular.min.js"></script>
   </head>
   <body>
       <header>
