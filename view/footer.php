@@ -78,6 +78,7 @@
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/OwlCarousel2/dist/owl.carousel.min.js"></script> <!--Aula 34 - Plugins -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/raty/lib/jquery.raty.js"></script>
     <script src="js/efeitos.js"></script> <!--Chama o arquivo com scripts de efeito -->
     <!-- Aula 32 e 33 -->
   </body>
