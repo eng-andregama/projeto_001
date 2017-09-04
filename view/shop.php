@@ -42,53 +42,52 @@
             </div>
                         <button type="button" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
                         <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
-        <!--<div id="destaque-produtos" class ="owl-carousel"></div> Esta div estava na linha 5 e fechava o conjunto de produtos. Desativada e passada a classe owlCarousel para a atual linha 5, junto com <div id="destaque-produtos" class ="owl-carousel">.--> 
+        <!--<div id="destaque-produtos" class ="owl-carousel"></div> Esta div estava na linha 5 e fechava o conjunto de produtos. Desativada e passada a classe owlCarousel para a atual linha 5, junto com <div id="destaque-produtos" class ="owl-carousel">.-->
     </div>
 
     <div id="promocoes" class="container">
         <div class="row">
-          <div class="col-md-2">
-              <div class="box-promocao box-1">
-                  <p>Escolha por Desconto</p>
-              </div>
-
-          </div>
-          <div class="col-md-10">
-              <div class="row-fluid">
-                  <div class="col-md-3">
-                      <div class="box-promocao">
-                          <div class="text-ate">até</div>
-                          <div class="text-numero">40</div>
-                          <div class="text-porcento">%</div>
-                          <div class="text-off">off</div>
-                      </div>
-                  </div>
-                  <div class="col-md-3">
-                      <div class="box-promocao">
-                          <div class="text-ate">até</div>
-                          <div class="text-numero">60</div>
-                          <div class="text-porcento">%</div>
-                          <div class="text-off">off</div>
-                      </div>
-                  </div>
-                  <div class="col-md-3">
-                      <div class="box-promocao">
-                          <div class="text-ate">até</div>
-                          <div class="text-numero">80</div>
-                          <div class="text-porcento">%</div>
-                          <div class="text-off">off</div>
-                      </div>
-                  </div>
-                  <div class="col-md-3">
-                      <div class="box-promocao">
-                          <div class="text-ate">até</div>
-                          <div class="text-numero">85</div>
-                          <div class="text-porcento">%</div>
-                          <div class="text-off">off</div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+            <div class="col-md-2">
+                <div class="box-promocao box-1">
+                    <p>Escolha por Desconto</p>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="row-fluid">
+                    <div class="col-md-3">
+                        <div class="box-promocao">
+                            <div class="text-ate">até</div>
+                            <div class="text-numero">40</div>
+                            <div class="text-porcento">%</div>
+                            <div class="text-off">off</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box-promocao">
+                            <div class="text-ate">até</div>
+                            <div class="text-numero">60</div>
+                            <div class="text-porcento">%</div>
+                            <div class="text-off">off</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box-promocao">
+                            <div class="text-ate">até</div>
+                            <div class="text-numero">80</div>
+                            <div class="text-porcento">%</div>
+                            <div class="text-off">off</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box-promocao">
+                            <div class="text-ate">até</div>
+                            <div class="text-numero">85</div>
+                            <div class="text-porcento">%</div>
+                            <div class="text-off">off</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -177,30 +176,30 @@
           });
       });
       $(function(){
-          var owlDestaque = $("#destaque-produtos");
-          owlDestaque.owlCarousel({
-          autoplay: true,
-          autoplayTimeout:2000,
-          items: 1,
-          singleItem: true,
+            var owlDestaque = $("#destaque-produtos");
+            owlDestaque.owlCarousel({
+            autoplay: true,
+            autoplayTimeout:2000,
+            items: 1,
+            singleItem: true,
 
-          });
-          $('#btn-destaque-prev').on("click", function(){
-          owlDestaque.trigger('prev.owl.carousel');
+            });
+            $('#btn-destaque-prev').on("click", function(){
+            owlDestaque.trigger('prev.owl.carousel');
 
-          });
-          $('#btn-destaque-next').on("click", function(){
-          owlDestaque.trigger('next.owl.carousel');
+            });
+            $('#btn-destaque-next').on("click", function(){
+            owlDestaque.trigger('next.owl.carousel');
 
-          });
-          $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
-              $(this).raty({
-                  starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
-                  starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
-                  starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
-                  score         : parseFloat($(this).data("score")), /* recebe o raty de cada avaliação dinamicamente */
-              });
-          });
+            });
+            $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
+                $(this).raty({
+                    starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
+                    starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
+                    starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
+                    score         : parseFloat($(this).data("score")), /* recebe o raty de cada avaliação dinamicamente */
+                });
+            });
       });
 </script>
 <!--    $(function(){
