@@ -28,7 +28,7 @@ class Sql {
 
             }
 
-              array_push = ($data, $row);
+              array_push($data, $row);
         }
 
               unset($result);
