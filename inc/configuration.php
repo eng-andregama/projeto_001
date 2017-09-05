@@ -20,7 +20,7 @@ class Sql {
 
         $result = $this->query($string_query);
 
-        $data = $array();
+        $data = array();
 
         while ($row = mysqli_fetch_array($result)) {
             foreach ($row as $key => $value) {
@@ -28,7 +28,7 @@ class Sql {
 
             }
 
-              $array_push = ($data, $row);
+              array_push = ($data, $row);
         }
 
               unset($result);
