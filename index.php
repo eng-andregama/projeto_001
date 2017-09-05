@@ -33,7 +33,7 @@ $app->get(
 
 $app->get('/produtos', function() {
 
-    //require_once("/inc/configuration.php");
+    include_once("inc/configuration.php");
 
     $sql = new Sql();
 
