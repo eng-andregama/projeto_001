@@ -33,13 +33,14 @@ $app->get(
 
 $app->get('/produtos', function() {
 
+    //require_once("/inc/configuration.php");
+
     $sql = new Sql();
 
     $data = $sql->select("SELECT * FROM tb_produtos where preco_promorcional > 0 order by preco_promorcional desc limit 3;");
 
     echo json_encode($data);
 
-  }
-);
+});
 
 $app->run();
