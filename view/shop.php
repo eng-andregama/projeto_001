@@ -102,63 +102,68 @@
                       <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
                           <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" class = "produto-img" Style="width:75%"> <!-- Aula 71 - produto retirado e acrescentado elemento angularjs "img/produtos/CafeteiraDolceGusto.jpg" -->
                           <h3>{{produto.nome_prod_longo}}</h3>
-                          <div class="estrelas" data-score="3"></div>
-                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
+                          <div class="estrelas" data-score="{{produto.media}}"></div>
+                          <div class="text-qtd-reviews text-arial-cinza">({{produto.total_reviews}})</div>
                           <div class="text-valor text-roxo">R$ {{produto.total}}</div>
                           <div class="text-parcelado text-arial-cinza">{{produto.parcelas}}x de R$ {{produto.parcela}} sem juros</div>
                       </a>
                 </div>
             </div>
         </div>
-        
     </div>
 </section>
+
 <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
 
 <script>
       angular.module("shop",[]).controller("destaque-controller", function($scope, $http) {
-          $scope.produtos = [];
-          var initCarousel = function() {
+      $scope.produtos = [];
+      var initCarousel = function() {
 
-              $(function(){
-                  var owlDestaque = $("#destaque-produtos");
-                  owlDestaque.owlCarousel({
-                  autoplay: true,
-                  autoplayTimeout:2000,
-                  items: 1,
-                  singleItem: true,
-                  });
-                  $('#btn-destaque-prev').on("click", function(){
-                  owlDestaque.trigger('prev.owl.carousel');
-                  });
-                  $('#btn-destaque-next').on("click", function(){
-                  owlDestaque.trigger('next.owl.carousel');
-                  });
+          $(function(){
+              var owlDestaque = $("#destaque-produtos");
+              owlDestaque.owlCarousel({
+              autoplay: true,
+              autoplayTimeout:2000,
+              items: 1,
+              singleItem: true,
               });
-          };
-              $http({
-            	  method: 'GET',
-            	  url: 'produtos',
-            	}).then(function successCallback(response) {
-
-            	    $scope.produtos = response.data;
-
-            	    setTimeout(initCarousel, 1000);
-
-            	  }, function errorCallback(response) {
-            	    // called asynchronously if an error occurs
-            	    // or server returns response with an error status.
-  	            });
-
-              $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
-                  $(this).raty({
-                      starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
-                      starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
-                      starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
-                      score         :  parseFloat($(this).data("score")),                                 // recebe o raty de cada avaliação dinamicamente
-                  });
+              $('#btn-destaque-prev').on("click", function(){
+              owlDestaque.trigger('prev.owl.carousel');
               });
-      });
+              $('#btn-destaque-next').on("click", function(){
+              owlDestaque.trigger('next.owl.carousel');
+              });
+          });
+      };
+
+      var initEstrelas = function() {
+          $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
+              $(this).raty({
+                  starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
+                  starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
+                  starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
+                  score         :  parseFloat($(this).data("score")),                                 // recebe o raty de cada avaliação dinamicamente
+              });
+          });
+      };
+
+      $http({
+    	  method: 'GET',
+    	  url: 'produtos',
+    	}).then(function successCallback(response) {
+
+    	    $scope.produtos = response.data;
+
+    	    setTimeout(initCarousel, 1000);
+          setTimeout(initEstrelas, 1000);
+
+    	  }, function errorCallback(response) {
+    	    // called asynchronously if an error occurs
+    	    // or server returns response with an error status.
+        });
+
+  });
 </script>
 
 
