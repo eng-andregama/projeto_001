@@ -7,7 +7,7 @@ require 'inc/Slim-2.x/Slim/Slim.php'; /*Alterado o caminho da classe para inc/Sl
 
 $app = new \Slim\Slim();
 
-// GET route
+// GET route index
 $app->get(
     '/',
     function () {
@@ -15,7 +15,7 @@ $app->get(
     }
 );
 
-// GET route
+// GET route videos
 $app->get(
     '/videos',
     function () {
@@ -23,7 +23,7 @@ $app->get(
     }
 );
 
-// GET route
+// GET route shop
 $app->get(
     '/shop',
     function () {
@@ -31,6 +31,7 @@ $app->get(
     }
 );
 
+// GET route produtos
 $app->get('/produtos', function() {
 
     include_once("inc/configuration.php");
