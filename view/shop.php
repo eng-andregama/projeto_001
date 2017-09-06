@@ -151,79 +151,50 @@
 <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
 
 <script>
-      angular.module("shop",[]).controller("destaque-controller", function($scope){
+      angular.module("shop",[]).controller("destaque-controller", function($scope, $http) {
           $scope.produtos = [];
+          var initCarousel = function() {
 
-          $scope.produtos.push({
-            nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
-            foto_principal: "moto-x.png",
-            preco: "1.259",
-            centavos: "10",
-            parcelas: 8,
-            parcela: "174,88",
-            total: "1.399,00"
+              $(function(){
+                  var owlDestaque = $("#destaque-produtos");
+                  owlDestaque.owlCarousel({
+                  autoplay: true,
+                  autoplayTimeout:2000,
+                  items: 1,
+                  singleItem: true,
+                  });
+                  $('#btn-destaque-prev').on("click", function(){
+                  owlDestaque.trigger('prev.owl.carousel');
+                  });
+                  $('#btn-destaque-next').on("click", function(){
+                  owlDestaque.trigger('next.owl.carousel');
+                  });
+              });
+          };
+              $http({
+            	  method: 'GET',
+            	  url: 'produtos',
+            	}).then(function successCallback(response) {
 
-          });
-          $scope.produtos.push({
-            nome_prod_longo:"IPhone",
-            foto_principal: "moto-x.png",
-            preco: "1.259",
-            centavos: "10",
-            parcelas: 8,
-            parcela: "174,88",
-            total: "1.399,00"
+            	    $scope.produtos = response.data;
 
-          });
-      });
-      $(function(){
-            var owlDestaque = $("#destaque-produtos");
-            owlDestaque.owlCarousel({
-            autoplay: true,
-            autoplayTimeout:2000,
-            items: 1,
-            singleItem: true,
+            	    setTimeout(initCarousel, 1000);
 
-            });
-            $('#btn-destaque-prev').on("click", function(){
-            owlDestaque.trigger('prev.owl.carousel');
+            	  }, function errorCallback(response) {
+            	    // called asynchronously if an error occurs
+            	    // or server returns response with an error status.
+  	            });
 
-            });
-            $('#btn-destaque-next').on("click", function(){
-            owlDestaque.trigger('next.owl.carousel');
-
-            });
-            $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
-                $(this).raty({
-                    starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
-                    starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
-                    starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
-                    score         : parseFloat($(this).data("score")), /* recebe o raty de cada avaliação dinamicamente */
-                });
-            });
+              $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
+                  $(this).raty({
+                      starHalf      : 'lib/raty/lib/images/star-half.png',                                // The name of the half star image.
+                      starOff       : 'lib/raty/lib/images/star-off.png',                                 // Name of the star image off.
+                      starOn        : 'lib/raty/lib/images/star-on.png',                                  // Name of the star image on.
+                      score         :  parseFloat($(this).data("score")),                                 // recebe o raty de cada avaliação dinamicamente
+                  });
+              });
       });
 </script>
-<!--    $(function(){
-
-        $("#destaque-produtos").owlCarousel({
-        autoPlay: 5000,
-        items: 1,
-        singleItem: true,
-
-     });
-
-      var owlDestaque = $("#destaque-produtos").data('owlCarousel');
-      $('#btn-destaque-prev').on("click", function(){
-      owlDestaque.prev();
-      });
-      $('#btn-destaque-next').on("click", function(){
-      owlDestaque.next();
-     });
-   }); -->
-
-
-
-
-
 
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
