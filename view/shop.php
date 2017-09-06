@@ -97,7 +97,7 @@
             <hr> <!-- Cria linha horizontal -->
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3" ng-repeat="produto in produtos">
                 <div class="box-produto-info">
                       <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
                           <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" class = "produto-img" Style="width:75%"> <!-- Aula 71 - produto retirado e acrescentado elemento angularjs "img/produtos/CafeteiraDolceGusto.jpg" -->
@@ -109,43 +109,8 @@
                       </a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="box-produto-info">
-                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
-                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
-                          <h3>Cafeteira Dolce Gusto Arno</h3>
-                          <div class="estrelas" data-score="5"></div>
-                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
-                          <div class="text-valor text-roxo">R$ 209,90</div>
-                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
-                      </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="box-produto-info">
-                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
-                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
-                          <h3>Cafeteira Dolce Gusto Arno</h3>
-                          <div class="estrelas" data-score="2.5"></div>
-                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
-                          <div class="text-valor text-roxo">R$ 209,90</div>
-                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
-                      </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="box-produto-info">
-                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
-                          <img src="img/produtos/CafeteiraDolceGusto.jpg" alt="Cafeteiras" Style="width:75%">
-                          <h3>Cafeteira Dolce Gusto Arno</h3>
-                          <div class="estrelas" data-score="5"></div>
-                          <div class="text-qtd-reviews text-arial-cinza">(300)</div>
-                          <div class="text-valor text-roxo">R$ 209,90</div>
-                          <div class="text-parcelado text-arial-cinza">10x de R$ 20,99 sem juros</div>
-                      </a>
-                </div>
-            </div>
         </div>
+        
     </div>
 </section>
 <?php include_once("footer.php"); ?> <!-- Aula 64 - Chama o footer no footer.php -->
