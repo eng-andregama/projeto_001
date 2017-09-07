@@ -1,11 +1,13 @@
 <!-- Aula 65 - Criação da loja virtual -->
-<?php include_once("header.php"); ?> <!-- Chama o cabeçalho -->
+<?php include_once("header.php");?> <!-- Chama o cabeçalho -->
 <section ng-controller="destaque-controller"> <!-- Aula 71 - ng-controller retirado da classe e passado para a section -->
     <div class="container" id="destaque-produtos-container"> <!-- Aula 69 - Incluindo angularjs -->
         <div id="destaque-produtos" class ="owl-carousel">
                 <div class="item"  ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
                     <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:50%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
+                        <a href="produto-{{produto.id_prod}}">
+                            <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:50%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
+                        </a>
                     </div>
                     <div class="col-sm-6 col-descricao">
                         <h2>{{produto.nome_prod_longo}}</h2>
@@ -81,7 +83,7 @@
         <div class="row">
             <div class="col-md-3" ng-repeat="produto in produtos">
                 <div class="box-produto-info">
-                      <a href="#"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
+                      <a href="produto-{{produto.id_prod}}"> <!-- A figura será clicável. Portanto, terá uma (tag a) em volta. -->
                           <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" class = "produto-img" Style="width:75%"> <!-- Aula 71 - produto retirado e acrescentado elemento angularjs "img/produtos/CafeteiraDolceGusto.jpg" -->
                           <h3>{{produto.nome_prod_longo}}</h3>
                           <div class="estrelas" data-score="{{produto.media}}"></div>
@@ -137,7 +139,7 @@
     	  }, function errorCallback(response) {
     	    // called asynchronously if an error occurs
     	    // or server returns response with an error status.
-        });
+      });
   });
 </script>
 

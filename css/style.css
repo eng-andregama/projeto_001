@@ -570,7 +570,7 @@ video {
   font-size: 30px;
   position: absolute;
   top: -10px;
-  left: 182px; /* Mudado de 182px para 170px */
+  left: 182px;
 
 }
 #destaque-produtos .col-descricao .btn-comprar {

@@ -34,6 +34,7 @@ class Sql {
               unset($result);
 
               return $data;
+              
     }
 
     public function __destruct() {
