@@ -5,25 +5,7 @@
         <div id="destaque-produtos" class ="owl-carousel">
                 <div class="item"  ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
                     <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:40%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
-                    </div>
-                    <div class="col-sm-6 col-descricao">
-                        <h2>{{produto.nome_prod_longo}}</h2>
-                        <div class="box-valor">
-                            <div class="text-noboleto text-arial-cinza">no boleto</div>
-                            <div class="text-por text-arial-cinza">por</div>
-                            <div class="text-reais text-roxo">R$</div>
-                            <div class="text-valor text-roxo">{{produto.preco}}</div>
-                            <div class="text-valor-centavos text-roxo">,{{produto.centavos}}</div>
-                            <div class="text-parcelas text-arial-cinza">ou em até {{produto.parcelas}}x de R$ {{produto.parcela}}</div>
-                            <div class="text-total text-arial-cinza">total a prazo R$ {{produto.total}}</div>
-                        </div>
-                        <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
-                    </div>
-                </div>
-                <div class="item" ng-repeat="produto in produtos"> <!-- Aula 69 - ng-repeat cria um loop para as diversas caracteristicas do produto -->
-                    <div class="col-sm-6 col-imagem">
-                        <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:40%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
+                        <img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" style="width:50%"> <!--Aula 69 - foto_principal e nome_prod_longo passam a ser atributo da classe .produto e assim sucessivamente -->
                     </div>
                     <div class="col-sm-6 col-descricao">
                         <h2>{{produto.nome_prod_longo}}</h2>
@@ -40,9 +22,9 @@
                     </div>
                 </div>
             </div>
-                        <button type="button" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
-                        <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
-        <!--<div id="destaque-produtos" class ="owl-carousel"></div> Esta div estava na linha 5 e fechava o conjunto de produtos. Desativada e passada a classe owlCarousel para a atual linha 5, junto com <div id="destaque-produtos" class ="owl-carousel">.-->
+            <!-- Inserir elementos aqui -->
+                    <button type="button" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
+                    <button type="button" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
     </div>
 
     <div id="promocoes" class="container">
@@ -119,7 +101,6 @@
       angular.module("shop",[]).controller("destaque-controller", function($scope, $http) {
       $scope.produtos = [];
       var initCarousel = function() {
-
           $(function(){
               var owlDestaque = $("#destaque-produtos");
               owlDestaque.owlCarousel({
@@ -136,7 +117,6 @@
               });
           });
       };
-
       var initEstrelas = function() {
           $('.estrelas').each(function() { /* Para cada estrela avaliada, aplica este $(this).raty ({'parâmetros'}) conjunto de avaliações */
               $(this).raty({
@@ -147,22 +127,17 @@
               });
           });
       };
-
       $http({
     	  method: 'GET',
     	  url: 'produtos',
     	}).then(function successCallback(response) {
-
     	    $scope.produtos = response.data;
-
     	    setTimeout(initCarousel, 1000);
           setTimeout(initEstrelas, 1000);
-
     	  }, function errorCallback(response) {
     	    // called asynchronously if an error occurs
     	    // or server returns response with an error status.
         });
-
   });
 </script>
 
