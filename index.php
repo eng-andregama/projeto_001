@@ -132,10 +132,7 @@ $app->get("/produto-:id_prod", function($id_prod) {
     $produto['total'] = number_format($preco, 2, ",", ".");
 
     require_once("view/shop-produto.php");
-
-
-
-    echo json_encode($data);
+    
 });
 
 $app->run();
