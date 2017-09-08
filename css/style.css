@@ -432,6 +432,7 @@ footer .col-links a,
 }
 footer .col-links .fa {
   margin: 0 6px;
+
 }
 
 footer .col-get-in-touch address {
@@ -464,6 +465,7 @@ footer .col-get-in-touch a {
 /* mudei aqui na aula 34 */
 footer .col-get-in-touch p {
   line-height: 20px;
+  margin-left: 0px;
 
 }
 footer .list-socials {
