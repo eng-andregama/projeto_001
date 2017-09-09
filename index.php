@@ -132,7 +132,37 @@ $app->get("/produto-:id_prod", function($id_prod) {
     $produto['total'] = number_format($preco, 2, ",", ".");
 
     require_once("view/shop-produto.php");
-    
+
+});
+
+//Get and post route - Carrinho de compras - Aula 73
+$app->get('/cart', function () {
+
+        include_once("inc/configuration.php");
+
+        require_once("view/cart.php");
+
+    }
+);
+
+$app->get("/carrinho-dados", function() {
+
+    include_once("inc/configuration.php");
+
+    $request_body = json_decode(file_get_contents('php://input'), true);
+
+    var_dump($request_body);
+
+});
+
+$app->post("/carrinho", function() {
+
+    include_once("inc/configuration.php");
+
+    $request_body = json_decode(file_get_contents('php://input'), true);
+
+    var_dump($request_body);
+
 });
 
 $app->run();
