@@ -163,7 +163,7 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 
 	};
 
-	carregarCarrinho();
+	//carregarCarrinho();
 
 });
 </script>

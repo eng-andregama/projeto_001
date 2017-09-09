@@ -19,7 +19,7 @@
                     <div class="text-parcelas text-arial-cinza">ou em até <?=$produto['parcelas']?>x de R$ <?=$produto['parcela']?></div>
                     <div class="text-total text-arial-cinza">total a prazo R$ <?=$produto['total']?></div>
                 </div>
-                <a href="#" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Retirado da div porque está posicionado num nivel diferente do resto dos textos -->
+                <a href="carrinhoAdd-<?=$produto['id_prod']?>" class="btn btn-comprar text-roxo"><i class="fa fa-shopping-cart"></i>compre agora</a> <!--Chamando os produtos dinamicamente através da rota carrinhoAdd via GET e procedure do mysql-->
             </div>
         </div>
     </div>

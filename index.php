@@ -148,14 +148,17 @@ $app->get('/cart', function () {
 //Get route procedure carrinho-dados - Aula 74
 
 $app->get("/carrinho-dados", function() {
+
   include_once("inc/configuration.php");
 
   $sql = new Sql();
 
+  $carrinho = result[0];
+
   $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
   $sql = new Sql();
-  
+
   $carrinho['produtos'] = $sql->select("CALL sp_carrinhosprodutos_list(".carrinho['id_car'].")");
 
   $carrinho = $result[0];
@@ -166,7 +169,27 @@ $app->get("/carrinho-dados", function() {
   echo json_encode($carrinho);
 
 });
+    //Chamando os produtos dinamicamente através da rota carrinhoAdd via GET e procedure do mysql
+$app->get("/carrinhoAdd-:id_prod", function($id_prod) {
 
+  include_once("inc/configuration.php");
+
+  $sql = new Sql();
+
+  $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
+
+  $carrinho = result[0];
+
+  $sql = new Sql();
+
+  $sql->query("CALL sp_carrinhosprodutos_add(".$carrinho['id_car'].",".$id_prod.")");
+
+  header("location: cart");
+
+  exit;
+
+});
+/*
 $app->post("/carrinho", function() {
 
     include_once("inc/configuration.php");
@@ -174,7 +197,5 @@ $app->post("/carrinho", function() {
     $request_body = json_decode(file_get_contents('php://input'), true);
 
     var_dump($request_body);
-
-});
-
+*/
 $app->run();
