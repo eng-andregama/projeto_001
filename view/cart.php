@@ -93,7 +93,19 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 			url:'carrinho-dados'
 		}).then(function(response){
 
-			console.log(response);
+			//console.log(response); - Desativada na aula 74 - 10:28min
+
+			$scope.carrinho = {
+				cep:response.data.cep_car,
+				subtotal:response.data.subtotal_car,
+				frete:response.data.frete_car,
+				total:response.data.total_car
+
+			};
+
+				$scope.produtos = response.data.produtos;
+
+				console.log(response.data);
 
 		}, function(response){
 
@@ -103,6 +115,7 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 
 	};
 
+/*
 	$scope.carrinho = {
 		cep:'01310-100',
 		subtotal:'1.110,00',
@@ -127,7 +140,7 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 		prazo:'10 dias úteis',
 		id_prod:2
 	}];
-
+*/
 	$scope.addQtd = function(_produto){
 
 		$http({
@@ -142,8 +155,6 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 
 		}, function(){
 
-
-
 		});
 
 	};
@@ -151,6 +162,8 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 	$scope.removeQtd = function(_produto){
 
 	};
+
+	carregarCarrinho();
 
 });
 </script>
