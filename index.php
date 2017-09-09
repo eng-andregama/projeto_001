@@ -145,13 +145,25 @@ $app->get('/cart', function () {
     }
 );
 
+//Get route procedure carrinho-dados - Aula 74
+
 $app->get("/carrinho-dados", function() {
+  include_once("inc/configuration.php");
 
-    include_once("inc/configuration.php");
+  $sql = new Sql();
 
-    $request_body = json_decode(file_get_contents('php://input'), true);
+  $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
-    var_dump($request_body);
+  $sql = new Sql();
+  
+  $carrinho['produtos'] = $sql->select("CALL sp_carrinhosprodutos_list(".carrinho['id_car'].")");
+
+  $carrinho = $result[0];
+  $carrinho ['total_car'] = number_format((float)$carrinho['total_car'], 2, ',', '.');
+  $carrinho ['subtotal_car'] = number_format((float)$carrinho['subtotal_car'], 2, ',', '.');
+  $carrinho ['frete_car'] = number_format((float)$carrinho['frete_car'], 2, ',', '.');
+
+  echo json_encode($carrinho);
 
 });
 
