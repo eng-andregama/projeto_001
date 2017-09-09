@@ -136,7 +136,7 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 	$scope.removeQtd = function(_produto){
 
 	};
-
+//Carrega carrinho de compras
 	carregarCarrinho();
 
 });
