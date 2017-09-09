@@ -1,4 +1,6 @@
 <?php
+// Aula 74 - Iniciando sessão com o session_start()
+session_start();
 
 class Sql {
 
@@ -34,7 +36,7 @@ class Sql {
               unset($result);
 
               return $data;
-              
+
     }
 
     public function __destruct() {
