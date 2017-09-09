@@ -1,6 +1,6 @@
 <?php
+require 'inc/configuration.php';
 
-// require 'inc/configuration.php';
 require 'inc/Slim-2.x/Slim/Slim.php'; /*Alterado o caminho da classe para inc/Slim-2.x/... */
 
 \Slim\Slim::registerAutoloader();
@@ -153,7 +153,7 @@ $app->get("/carrinho-dados", function() {
 
   $sql = new Sql();
 
-  $carrinho = result[0];
+  $carrinho = $result[0];
 
   $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
@@ -178,7 +178,7 @@ $app->get("/carrinhoAdd-:id_prod", function($id_prod) {
 
   $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
-  $carrinho = result[0];
+  $carrinho = $result[0];
 
   $sql = new Sql();
 
