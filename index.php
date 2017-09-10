@@ -214,4 +214,52 @@ $app->delete("/carrinhoRemoveAll-:id_prod", function($id_prod) {
     ));
 
 });
+//Route para atualizar (adicionar) itens do carrinho - Aula 76 - Atualizar quantidade
+
+$app->post("/carrinho-produto", function(){
+
+    include_once("inc/configuration.php");
+
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $sql = new Sql();
+
+    $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
+
+    $carrinho = $result[0];
+
+    $sql = new Sql();
+
+    $sql->query("CALL sp_carrinhosprodutos_add(".$carrinho['id_car'].",".$data['id_prod'].")");
+
+    echo json_encode(array(
+      "success"=>true
+
+    ));
+});
+
+//Route para atualizar (remover) itens do carrinho - Aula 76 - Atualizar quantidade
+
+$app->delete("/carrinho-produto", function(){
+
+    include_once("inc/configuration.php");
+
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $sql = new Sql();
+
+    $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
+
+    $carrinho = $result[0];
+
+    $sql = new Sql();
+
+    $sql->query("CALL sp_carrinhosprodutos_rem(".$carrinho['id_car'].",".$data['id_prod'].")");
+
+    echo json_encode(array(
+      "success"=>true
+
+    ));
+});
+
 $app->run();
