@@ -29,7 +29,7 @@
 					      <span class="input-group-btn">
 					        <button class="btn text-roxo" ng-click="addQtd(produto)" type="button"><i class="fa fa-chevron-down"></i></button>
 					      </span>
-					      <input type="text" class="form-control" ng-model="produto.qtd">
+					      <input type="text" class="form-control" ng-model="produto.qtd_car"> <!--Alterado para produto.qtd_car na aula 75 -->
 					      <span class="input-group-btn">
 					        <button class="btn text-roxo" ng-click="removeQtd(produto)" type="button"><i class="fa fa-chevron-up"></i></button>
 					      </span>
@@ -41,7 +41,7 @@
 					</td>
 					<td class="text-center">R$ {{produto.preco}}</td>
 					<td class="text-center">R$ {{produto.total}}</td>
-					<td class="text-center"><button class="btn text-roxo" type="button"><i class="fa fa-close"></i></button></td>
+					<td class="text-center"><button ng-click="removeAll(produto)" class="btn text-roxo" type="button"><i class="fa fa-close"></i></button></td> <!-- Aula 75 - Programando botão de exclusão de itens do carrinho -->
 				</tr>
 			</tbody>
 		</table>
@@ -136,6 +136,22 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 	$scope.removeQtd = function(_produto){
 
 	};
+// Remove todos os itens do carrinho de compras
+	$scope.removeAll = function (_produto){
+
+		$http({
+			method:'DELETE',
+			url:'carrinhoRemoveAll-'+_produto.id_prod,
+		}).then(function(response){
+
+			console.log(response);
+
+		}, function(){
+
+		});
+
+	};
+
 //Carrega carrinho de compras
 	carregarCarrinho();
 
