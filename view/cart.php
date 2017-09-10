@@ -144,7 +144,10 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 			url:'carrinhoRemoveAll-'+_produto.id_prod,
 		}).then(function(response){
 
-			console.log(response);
+			//Carrega carrinho de compras
+				carregarCarrinho();
+
+			//console.log(response);
 
 		}, function(){
 
