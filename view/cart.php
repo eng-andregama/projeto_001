@@ -27,11 +27,11 @@
 					<td class="col-xs-2">
 						<div class="input-group">
 					      <span class="input-group-btn">
-					        <button class="btn text-roxo" ng-click="addQtd(produto)" type="button"><i class="fa fa-chevron-down"></i></button>
+					        <button class="btn text-roxo" ng-click="removeQtd(produto)" type="button"><i class="fa fa-chevron-down"></i></button> <!--Aula 76 - Atualizando as quantidades de itens no carrinho -->
 					      </span>
 					      <input type="text" class="form-control" ng-model="produto.qtd_car"> <!--Alterado para produto.qtd_car na aula 75 -->
 					      <span class="input-group-btn">
-					        <button class="btn text-roxo" ng-click="removeQtd(produto)" type="button"><i class="fa fa-chevron-up"></i></button>
+					        <button class="btn text-roxo" ng-click="addQtd(produto)" type="button"><i class="fa fa-chevron-up"></i></button> <!--Aula 76 - Atualizando as quantidades de itens no carrinho -->
 					      </span>
 					    </div>
 					</td>
@@ -124,8 +124,10 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 				id_prod:_produto.id_prod
 			})
 		}).then(function(response){
+			//Carrega carrinho de compras
+			carregarCarrinho();
 
-			console.log(response);
+			//console.log(response);
 
 		}, function(){
 
@@ -134,6 +136,22 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 	};
 
 	$scope.removeQtd = function(_produto){
+
+		$http({
+			method:'DELETE',
+			url:'carrinho-produto',
+			data:JSON.stringify({
+				id_prod:_produto.id_prod
+			})
+		}).then(function(response){
+
+			//Carrega carrinho de compras
+			carregarCarrinho();
+			//console.log(response);
+
+		}, function(){
+
+		});
 
 	};
 // Remove todos os itens do carrinho de compras
