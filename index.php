@@ -262,4 +262,67 @@ $app->delete("/carrinho-produto", function(){
     ));
 });
 
+//Route calculo do frete_car
+$app->get("/calcular-frete-:cep", function($cep) {
+
+    include_once("inc/configuration.php");
+
+    require_once("inc/php-calcular-frete-correios/Frete.php");
+
+    $sql = new Sql();
+
+    $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
+
+    $carrinho = $result[0];
+
+    $sql = new Sql();
+
+    $produtos = $sql->select("CALL sp_carrinhosprodutosfrete_list(".$carrinho['id_car'].")");
+
+    $peso = 0;
+    $comprimento = 0;
+    $altura = 0;
+    $largura = 0;
+    $valor = 0;
+
+    foreach ($produtos as $produto) {
+      $peso =+ $produto['peso'];
+      $comprimento =+ $produto['comprimento'];
+      $altura =+ $produto['altura'];
+      $largura =+ $produto['largura'];
+      $valor =+ $produto['preco'];
+
+    }
+
+    $cep = trim(str_replace('-','',$cep));
+
+    $frete = new Frete(
+        $cepDeOrigem = '01418100',
+        $cepDeDestino = $cep,            //trim(str_replace('-','',$cep)), str_replace retira traços. Trim elimina os espaços.
+        $peso,
+        $comprimento,
+        $altura,
+        $largura,
+        $valor
+    );
+
+    $sql = new Sql();
+
+    $sql->query("
+    UPDATE tb_carrinhos
+    SET
+        cep_car = '".$cep."',
+        frete_car = ".$frete->getValor().",
+        prazo_car = ".$frete->getPrazoEntrega()."
+    WHERE id_car = ".$carrinho['id_car']
+    );
+
+    echo json_encode(array(
+        'success'=>true
+        //'valor_frete'=>$frete->getValor(),
+        //'prazo'=>$frete->getPrazoEntrega()
+    ));
+
+});
+
 $app->run();
