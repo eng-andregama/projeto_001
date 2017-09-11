@@ -37,7 +37,7 @@
 					</td>
 					<td class="text-center col-xs-2">
 						<p>Entrega para o<br/>CEP: {{carrinho.cep}}</p>
-						<strong class="text-roxo">{{produto.prazo}}</strong>
+						<strong class="text-roxo">{{carrinho.prazo}}</strong> <!--Alterado de produto.prazo para carrinho.prazo - aula 77 -->
 					</td>
 					<td class="text-center">R$ {{produto.preco}}</td>
 					<td class="text-center">R$ {{produto.total}}</td>
@@ -51,9 +51,9 @@
 						<div class="box-outline-grey">
 							<p style="margin:28px auto;">Simule o prazo de entrega e o frete para seu CEP abaixo:</p>
 							<div class="input-group col-xs-4" style="margin:0 auto;">
-						      <input type="text" class="form-control">
+						      <input type="text" class="form-control" ng-model="cep"> <!--ativando botão do calculo de frete com o angularjs -->
 						      <span class="input-group-btn">
-						      	<button class="btn btn-default" type="button">Calcular Frete</button>
+						      	<button class="btn btn-default" ng-click="calcularFrete(cep)" type="button">Calcular Frete</button>
 						      </span>
 						  </div>
 					</div>
@@ -99,7 +99,8 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 				cep:response.data.cep_car,
 				subtotal:response.data.subtotal_car,
 				frete:response.data.frete_car,
-				total:response.data.total_car
+				total:response.data.total_car,
+				prazo:response.data.prazo_car+' dias úteis'
 
 			};
 
@@ -172,7 +173,22 @@ angular.module("shop", []).controller("cart-controller", function($scope, $http)
 		});
 
 	};
+//Criando o escopo para o calculo do frete - Aula 77
+	$scope.calcularFrete = function(_cep){
 
+		$http({
+			method:'GET',
+			url:'calcular-frete-'+_cep,
+		}).then(function(response){
+
+				//console.log(response.data);
+				carregarCarrinho();
+
+		}, function(){
+
+		});
+
+	};
 //Carrega carrinho de compras
 	carregarCarrinho();
 
