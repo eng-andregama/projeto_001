@@ -1,5 +1,6 @@
 <!-- Header retirado - Aula 64 -->
 <!-- Aula 24 - Adicionando o banner-->
+<!-- Testando o git-->
 <?php include_once("header.php"); ?> <!-- Chama o cabeçalho -->
     <section>
           <div id="banner">
@@ -104,7 +105,7 @@
                       <div class="text-center">
                           <div class="row row-max-400">
                                 <div class="col-xs-6"> <!-- Para tela de celular -->
-                                    <a href="#" class="btn btn-roxo">Shop</a>
+                                    <a href="shop" class="btn btn-roxo">Shop</a>
                                 </div>
                                 <div class="col-xs-6"> <!-- Para tela de celular -->
                                     <a href="#" class="btn btn-amarelo">Register</a>
